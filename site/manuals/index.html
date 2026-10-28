@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playbooks: SEO for New Sites, In-Development Sites &amp; Live Sites | daytona-seo-notch</title>
+  <meta name="description" content="Three scenario playbooks: launching a brand-new site (brief → queries → strategy → gate → go-live), auditing a site still in development (localhost/dist audits), and growing a published site (audit → analytics → drift). Each with exact skills and steps.">
+  <link rel="canonical" href="https://salacoste.github.io/daytona-seo-notch/manuals/">
+  <meta name="theme-color" content="#ff5c00">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/spacechemical.css">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="daytona-seo-notch">
+  <meta property="og:title" content="SEO Playbooks — New Site · In Development · Live Site">
+  <meta property="og:description" content="Step-by-step playbooks with the exact skills for every stage of a site's life: intake and strategy before a line of code, pre-launch gates on localhost, audits and monitoring after publication.">
+  <meta property="og:url" content="https://salacoste.github.io/daytona-seo-notch/manuals/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "SEO playbooks by scenario",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "New site from scratch", "url": "https://github.com/salacoste/daytona-seo-notch/blob/main/docs/manuals/scenario-new-site.md" },
+      { "@type": "ListItem", "position": 2, "name": "Site in development", "url": "https://github.com/salacoste/daytona-seo-notch/blob/main/docs/manuals/scenario-in-development.md" },
+      { "@type": "ListItem", "position": 3, "name": "Published site", "url": "https://github.com/salacoste/daytona-seo-notch/blob/main/docs/manuals/scenario-live-site.md" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/daytona-seo-notch/" aria-label="daytona-seo-notch — home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M18 45 L32 19 L46 45" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 36 H39" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round"/></svg>
+        </span>
+        daytona-seo-notch
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/daytona-seo-notch/skills/">Skills</a>
+        <a href="/daytona-seo-notch/manuals/" aria-current="page">Playbooks</a>
+        <a href="/daytona-seo-notch/guides/analytics/">Guides</a>
+        <a href="https://github.com/salacoste/daytona-seo-notch">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-bottom:calc(var(--space-section)*0.4)">
+      <div class="container">
+        <p class="eyebrow">Playbooks · pick your scenario</p>
+        <h1>Every stage of a site's life, covered</h1>
+        <p class="lead" style="margin-top:var(--space-4)">The same executable machinery, aimed at the right moment: before the first line of code, while pages are still being built on localhost, and after the site is live. Full manuals live in the repository (<code class="inline">docs/manuals/</code>); this page is the map.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0" aria-labelledby="s1">
+      <div class="container">
+        <h2 id="s1">1 · Brand-new site</h2>
+        <p class="lead" style="margin-top:var(--space-4)">Nothing exists yet — a new client or product. Start with understanding, end with a zero-decision launch.</p>
+        <div class="steps" style="margin-top:var(--space-8)">
+          <div class="step"><div><h3><code class="inline">/daytona-seo-notch-brief</code> — intake</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">Structured client brief: business, audience, competitors, markets (Yandex vs Google priority for RU). Artifact: <code class="inline">brief-&lt;slug&gt;/</code>.</p></div></div>
+          <div class="step"><div><h3>Queries + search volume</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">Seed pool → expansion → the <strong>agreement gate</strong>: a signed query table with volume per source (Google Keyword Planner, DataForSEO, Yandex Wordstat flow — no invented numbers).</p></div></div>
+          <div class="step"><div><h3><code class="inline">/daytona-seo-notch-prelaunch</code> Phase 0 — strategy</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">Site type (corporate / landing / blog) → IA and the URL map: every route gets its query, title draft and schema type. Sitemap is designed here.</p></div></div>
+          <div class="step"><div><h3>Phases 1–2 — build with a gate</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">Template checks on the dev server; then the pre-launch gate: full audit of <code class="inline">localhost</code>/<code class="inline">dist</code>, sitemap generation, AI readiness, drift baseline, CI recipe for PRs.</p></div></div>
+          <div class="step"><div><h3>Phase 3 — go-live switch</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">No decisions on launch day: remove noindex (verified), Search Console + Yandex Webmaster, analytics firing, first production audit, prod drift baseline, IndexNow.</p></div></div>
+        </div>
+        <p style="margin-top:var(--space-6)"><a class="btn btn-ghost" href="https://github.com/salacoste/daytona-seo-notch/blob/main/docs/manuals/scenario-new-site.md">Full manual (RU) →</a></p>
+      </div>
+    </section>
+
+    <section class="section band-inverse" aria-labelledby="s2">
+      <div class="container">
+        <h2 id="s2">2 · Site in development — something already exists</h2>
+        <p class="lead" style="margin-top:var(--space-4)">Half the pages are coded, some content is written. Mine what exists before asking anyone anything.</p>
+        <div class="grid grid-3" style="margin-top:var(--space-8)">
+          <article class="card"><p class="kicker">Step 1</p><h3>Local scan</h3><p><code class="inline">/daytona-seo-notch-brief</code> Stage B: reads the project — identity docs, per-file content inventory (H1/title/meta/flags), SEO signals in code, stack verdict (SSR/SSG/SPA), native vocabulary → seed queries. Every fact cites its file.</p></article>
+          <article class="card"><p class="kicker">Step 2</p><h3>Brief the gaps, agree queries</h3><p>Stage A asks only what the scan couldn't answer; then the query agreement gate and volume, same as the new-site path. Delta to the IA: which agreed queries lack a URL.</p></article>
+          <article class="card"><p class="kicker">Steps 3–4</p><h3>Gate &amp; launch</h3><p>Bring templates to standard, run the pre-launch gate on <code class="inline">localhost</code> (audit, sitemap, AI readiness, drift baseline), then the same zero-decision go-live switch. Replacing an old site? The 301 redirect map is a gate item.</p></article>
+        </div>
+        <p style="margin-top:var(--space-6)"><a class="btn btn-primary" href="https://github.com/salacoste/daytona-seo-notch/blob/main/docs/manuals/scenario-in-development.md">Full manual (RU) →</a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="s3">
+      <div class="container">
+        <h2 id="s3">3 · Published site</h2>
+        <p class="lead" style="margin-top:var(--space-4)">The site is live. Understand it, connect real data, fix by priority, monitor forever.</p>
+        <div class="steps" style="margin-top:var(--space-8)">
+          <div class="step"><div><h3><code class="inline">/daytona-seo-notch-audit &lt;url&gt;</code></h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">Works on free sources with zero keys. Health score 0–100, prioritized plan, artifacts in <code class="inline">{domain}-audit/</code>.</p></div></div>
+          <div class="step"><div><h3>Depth by finding</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">technical / schema / sitemap / content / page / ai — one skill per finding class; "traffic dropped" starts with the Google-updates ledger, not with content blame.</p></div></div>
+          <div class="step"><div><h3>Connect data</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem"><code class="inline">/marketing-tools-setup</code> → <code class="inline">/daytona-seo-notch-analytics</code>: GA4 + Yandex Metrika + GSC cross-engine reads, incl. Yandex search phrases GA4 can't show.</p></div></div>
+          <div class="step"><div><h3>Grow &amp; monitor</h3><p style="color:var(--color-ink-muted);font-size:0.9375rem">Content and AI-visibility work; then <code class="inline">/daytona-seo-notch-drift</code> baseline → compare after every deploy; monthly re-audits.</p></div></div>
+        </div>
+        <p style="margin-top:var(--space-6)"><a class="btn btn-ghost" href="https://github.com/salacoste/daytona-seo-notch/blob/main/docs/manuals/scenario-live-site.md">Full manual (RU) →</a></p>
+      </div>
+    </section>
+
+    <section class="section band-inverse" aria-labelledby="ref">
+      <div class="container">
+        <h2 id="ref">Every skill, documented</h2>
+        <p class="lead" style="margin-top:var(--space-4)">35 skills — the SEO line, the marketing suite and the infrastructure — each with purpose, when to use, commands and artifacts.</p>
+        <p style="margin-top:var(--space-8);display:flex;gap:var(--space-3);flex-wrap:wrap">
+          <a class="btn btn-primary" href="https://github.com/salacoste/daytona-seo-notch/blob/main/docs/manuals/skills-reference.md">Skills reference (RU)</a>
+          <a class="btn btn-ghost" style="color:#fff;border-color:#4d4d4d" href="/daytona-seo-notch/skills/">Browse the catalog</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a class="brand" href="/daytona-seo-notch/" style="margin-bottom:var(--space-4)">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M18 45 L32 19 L46 45" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 36 H39" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round"/></svg></span>
+          daytona-seo-notch
+        </a>
+        <p style="max-width:34ch">Executable SEO &amp; marketing agent skills for Google Antigravity. Merges <a href="https://github.com/AgriciDaniel/claude-seo">claude-seo</a> + <a href="https://github.com/coreyhaines31/marketingskills">marketingskills</a> (MIT).</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/daytona-seo-notch/skills/">Skills</a></li>
+          <li><a href="/daytona-seo-notch/manuals/">Playbooks</a></li>
+          <li><a href="/daytona-seo-notch/guides/analytics/">Analytics guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="https://github.com/salacoste/daytona-seo-notch">GitHub</a></li>
+          <li><a href="https://github.com/salacoste/daytona-seo-notch/tree/main/docs/manuals">All manuals (RU)</a></li>
+          <li><a href="https://github.com/salacoste/daytona-seo-notch/blob/main/LICENSE">License (MIT)</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

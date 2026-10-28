@@ -79,6 +79,8 @@ Open the folder in **Antigravity** and:
 /daytona-seo-notch-audit https://your-site.com # full audit on free data sources
 ```
 
+**Pick your scenario** — full manuals in [`docs/manuals/`](docs/manuals/README.md): new client project → `/daytona-seo-notch-brief` · site in development → `/daytona-seo-notch-prelaunch` (audits your `localhost`/`dist` build) · live site → `/daytona-seo-notch-audit <url>`.
+
 Works with **zero API keys** (rendering, robots/sitemap, Common Crawl, PSI/CrUX where keyless). Optional unlocks:
 
 - `GOOGLE_API_KEY` (free) → field Core Web Vitals (PSI + CrUX) in audits
@@ -106,6 +108,7 @@ Every recommendation carries its first-principle observation, dependencies on ot
 
 | Doc | What |
 |---|---|
+| **User manuals by scenario** *(Russian)* | [New site](docs/manuals/scenario-new-site.md) · [In development](docs/manuals/scenario-in-development.md) · [Live site](docs/manuals/scenario-live-site.md) · [All 35 skills reference](docs/manuals/skills-reference.md) |
 | [`docs/GOAL.md`](docs/GOAL.md) | Mission, stage goals E1–E6, v1.0 success criteria *(Russian)* |
 | [`docs/analysis-repos.md`](docs/analysis-repos.md) | Deep comparative analysis of both upstreams + merge decision matrix *(Russian)* |
 | [`docs/UPSTREAMS.md`](docs/UPSTREAMS.md) | How to refresh from upstreams (`adapt_skills.py`, `port_marketing_skills.py`) *(Russian)* |
