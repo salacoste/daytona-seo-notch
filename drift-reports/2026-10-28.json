@@ -1,0 +1,162 @@
+{
+  "status": "ok",
+  "url": "https://salacoste.github.io/daytona-seo-notch",
+  "baseline_id": 1,
+  "baseline_timestamp": "2026-10-28T19:30:07.113263+00:00",
+  "comparison_timestamp": "2026-10-28T19:30:07.578463+00:00",
+  "summary": {
+    "total_rules": 17,
+    "triggered": 0,
+    "critical": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "triggered_findings": [],
+  "untriggered_findings": [
+    {
+      "rule": "schema_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "2 schema block(s)",
+      "new_value": "0 schema blocks",
+      "message": "Schema presence unchanged."
+    },
+    {
+      "rule": "canonical_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://salacoste.github.io/daytona-seo-notch/",
+      "new_value": "https://salacoste.github.io/daytona-seo-notch/",
+      "message": "Canonical URL unchanged."
+    },
+    {
+      "rule": "canonical_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "https://salacoste.github.io/daytona-seo-notch/",
+      "new_value": null,
+      "message": "Canonical tag presence unchanged."
+    },
+    {
+      "rule": "noindex_added",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Robots directives unchanged regarding noindex."
+    },
+    {
+      "rule": "h1_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "SEO audits onreal data, not memory",
+      "new_value": null,
+      "message": "H1 presence unchanged."
+    },
+    {
+      "rule": "h1_changed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "SEO audits onreal data, not memory",
+      "new_value": "SEO audits onreal data, not memory",
+      "message": "H1 text is similar enough (similarity: 100%)."
+    },
+    {
+      "rule": "title_removed",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": "SEO Skills for Google Antigravity \u2014 Executable SEO Audits | daytona-seo-notch",
+      "new_value": null,
+      "message": "Title tag presence unchanged."
+    },
+    {
+      "rule": "status_code_error",
+      "severity": "CRITICAL",
+      "triggered": false,
+      "old_value": 200,
+      "new_value": 200,
+      "message": "Status code: 200 -> 200."
+    },
+    {
+      "rule": "title_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "SEO Skills for Google Antigravity \u2014 Executable SEO Audits | daytona-seo-notch",
+      "new_value": "SEO Skills for Google Antigravity \u2014 Executable SEO Audits | daytona-seo-notch",
+      "message": "Title text unchanged."
+    },
+    {
+      "rule": "meta_description_changed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "Open-source SEO and marketing agent skills for Google Antigravity: full-site audits on real data, technical SEO, Core We...",
+      "new_value": "Open-source SEO and marketing agent skills for Google Antigravity: full-site audits on real data, technical SEO, Core We...",
+      "message": "Meta description unchanged."
+    },
+    {
+      "rule": "cwv_regressed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "CWV comparison skipped (data unavailable)."
+    },
+    {
+      "rule": "perf_score_dropped",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": null,
+      "new_value": null,
+      "message": "Performance score comparison skipped."
+    },
+    {
+      "rule": "og_tags_removed",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": [
+        "og:type",
+        "og:site_name",
+        "og:title",
+        "og:description",
+        "og:url",
+        "og:image"
+      ],
+      "new_value": [],
+      "message": "OG tags presence unchanged."
+    },
+    {
+      "rule": "schema_modified",
+      "severity": "WARNING",
+      "triggered": false,
+      "old_value": "0c43d00536c9...",
+      "new_value": "0c43d00536c9...",
+      "message": "Schema content hash unchanged."
+    },
+    {
+      "rule": "schema_added",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "0 schema blocks",
+      "new_value": "2 schema block(s)",
+      "message": "No new schema added."
+    },
+    {
+      "rule": "h2_structure_changed",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "6 H2s",
+      "new_value": "6 H2s",
+      "message": "H2 structure unchanged."
+    },
+    {
+      "rule": "content_hash_changed",
+      "severity": "INFO",
+      "triggered": false,
+      "old_value": "c74aeb4f8572...",
+      "new_value": "c74aeb4f8572...",
+      "message": "Page content hash unchanged."
+    }
+  ],
+  "current_status_code": 200,
+  "cwv_compared": false
+}
