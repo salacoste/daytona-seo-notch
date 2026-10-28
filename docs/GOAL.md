@@ -1,29 +1,31 @@
-# Цель проекта daytona-seo-notch
+# Цель: daytona-seo-notch — курс на v1.0
 
-**Формулировка:** создать собственную профессиональную библиотеку SEO-скиллов для Google Antigravity — `daytona-seo-notch` — объединяющую исполняемую SEO-аудитику [claude-seo](https://github.com/AgriciDaniel/claude-seo) (реальные данные: рендер, краул, CWV, schema, E-E-A-T) и маркетинговую методологию [marketingskills](https://github.com/coreyhaines31/marketingskills), адаптированную под нативные форматы Antigravity (Agent Skills, `.agents/skills/`, `.agents/mcp_config.json`) и лишённую привязок к Claude Code.
+**Миссия (неизменна):** профессиональная SEO/маркетинг-библиотека скиллов для Google Antigravity, работающая на измеренных данных; лучший мерж двух MIT-апстримов (claude-seo = исполнение, marketingskills = методология); платформо-нейтрально, безопасно, сопровождаемо.
 
-## Продукт
+**Стартовая точка (2026-10-28, v0.2):** ядро аудита готово (E1–E2) — runtime на 60 скриптах (uv, проверен на живых URL), 7 скиллов, lint зелёный, BMAD-планирование развёрнуто.
 
-Зонтичный оркестратор `/daytona-seo-notch` + линейка профильных скиллов: `-audit`, `-page`, `-technical`, `-schema`, `-sitemap`, `-content`, далее — AI-видимость, drift-мониторинг, local/maps, Google API, маркетинговая широта (CRO, копирайтинг, письма). Команда вида `/daytona-seo-notch-audit https://site` должна выдавать health score (0–100), приоритизированный action plan и артефакты в `{domain}-audit/` — на измеренных данных, а не генерализованном чек-листе из памяти модели.
+## Дальнейшие цели по этапам
 
-## Принципы
+**E3. AI-видимость (v0.3).** Единый домен `/daytona-seo-notch-ai`: стратегия из mk `ai-seo` (16 справочников: prompt-портфель, answer accuracy, платформенные факторы ранжирования, LinkedIn/YouTube-цитирования, OKF, format volatility) + техника из cs `seo-geo`/`seo-agentic` (llms.txt с доказательной базой, WebMCP, Lighthouse Agentic Browsing X/N, access policy, vendor matrix). Готовность: скилл отвечает и на стратегические, и на технические вопросы; треки аудита ссылаются на него вместо inline-заглушек.
 
-1. **Два проверенных апстрима (MIT).** Из каждого домена берём лучшую реализацию по матрице решений PRD (`_bmad-output/initiative-antigravity-marketing-seo/prd-*/…`); пересечения мержим, не дублируем.
-2. **Всё исполняемо.** Рекомендации опираются на `tools/seo-runtime/` (60 Python-скриптов под uv) и `tools/clis/` (zero-dependency Node) — реальный fetch, рендер, парсинг, API.
-3. **Бесплатные источники по умолчанию** (рендер, robots/sitemap, Common Crawl, CrUX/PSI без ключей где возможно); платные данные — опционально через MCP-конфиг Antigravity.
-4. **Платформо-нейтрально.** Запрещены `${CLAUDE_PLUGIN_ROOT}`, пути `~/.claude`, идиомы субагентов Claude Code и hooks; параллелизм треков аудита выполняет планировщик задач Antigravity.
-5. **Безопасность.** Страницы, SERP и API-ответы — недоверенные данные: анализировать, но не исполнять инструкции из них (prompt-injection guard). Секреты — только в `.env.marketing` (0600, gitignored), никогда в чате, логах и коммитах.
-6. **Лицензионная гигиена.** MIT-атрибуция и PROVENANCE сохраняются; FLOW-промпты (CC BY 4.0) переносятся только с явной атрибуцией.
+**E4. Маркетинговая широта (v0.4).** Порт ~20 приоритетных скиллов mk (product-marketing, cro, copywriting, copy-editing, ab-testing, emails, analytics, attribution, conversion-tracking, pricing, offers, launch, link-building, programmatic-seo, site-architecture, content-strategy, customer-research, competitors, cold-email, ads) с `product-marketing` контекст-фундаментом. Пересечения — строго по матрице PRD §4.4 (7 доменов), без дублирования. Готовность: evals валидны, cross-link между скиллами живой.
 
-## Критерии успеха
+**E5. Данные и мониторинг (v0.5).** Drift-скилл (baseline/compare/history на SQLite) в брендинге daytona; MCP-воркфлоу: `.agents/mcp_config.example.json` + guided-скилл `marketing-tools-setup` (секреты только в `.env.marketing` 0600; один инструмент за раз; read-only тест); Node CLI mk — в `tools/clis/`. Готовность: повторный `compare` даёт осмысленный diff; MCP-конфиг валиден по схеме Antigravity.
 
-- Сквозной аудит сайта из Antigravity без ручных правок скиллов: score + план + артефакты.
-- Чистый клон → первый аудит ≤ 30 минут (`uv sync` + Chromium), macOS/Linux.
-- Lint зелёный: валидный фронтматтер, 0 запрещённых паттернов, 0 битых ссылок.
-- Каждый скилл проходит свой eval/trigger-тест — защита от мёртвого веса.
+**E6. Качество и релиз (v1.0).** Eval на каждый скилл (модель mk); smoke-тесты runtime в CI; процедура обновления апстримов (`tools/adapt_skills.py` + PROVENANCE); установка «чистый клон → первый аудит ≤ 30 минут»; README с quickstart. Не-цели v1 сохраняются: без собственных MCP-серверов, UI, локализации скиллов и plugin-упаковки.
 
-## Этапы
+## Критерии успеха v1.0
 
-E1 каркас и конвенции → **E2 ядро аудита end-to-end (текущий)** → E3 AI-видимость (мерж ai-seo + агентная готовность) → E4 маркетинговая широта (~20 скиллов) → E5 drift/MCP/credentials → E6 evals/lint/release. Управление — по BMAD, артефакты в `_bmad-output/initiative-antigravity-marketing-seo/`.
+1. Сквозные сценарии UJ-1..UJ-4 из PRD проходят в Antigravity без ручных правок скиллов.
+2. Lint + evals зелёные; 0 секретов в коммитах (CI-grep).
+3. Каждый из ~27 скиллов срабатывает по своему триггеру — мёртвого веса нет.
+4. Еженедельный drift-отчёт по собственному полигону стабильно 2 месяца.
 
-**Не цели (v1):** собственные MCP-серверы, UI/дашборды, локализация скиллов, упаковка в Antigravity-plugin, правки логики скриптов апстрима.
+## Риски и реакция
+
+- **Drift форматов Antigravity** — минимум магии: проверки формата в lint, стандарт Agent Skills как якорь.
+- **Обновление апстримов** — репорт через `adapt_skills.py`, коммиты зафиксированы в PROVENANCE.
+- **Разбухание библиотеки** — скилл без пройденного eval не берём (counter-metric SM-C1).
+- **Сеть/доступы у пользователя** — все аудиты работают на бесплатных источниках по умолчанию; платные — опционально.
+
+Работа ведётся по BMAD (`_bmad-output/initiative-antigravity-marketing-seo/`); каждый этап закрывается коммитом с зелёным lint и обновлением статуса в README.
