@@ -22,7 +22,7 @@
 - [x] Product brief + PRD draft + Goal (`docs/GOAL.md`)
 - [x] **E1–E2: каркас + ядро аудита end-to-end** — runtime `tools/seo-runtime/` (60 скриптов, uv, проверен на живых URL) + 7 скиллов `daytona-seo-notch*` (orchestrator, audit, page, technical, content, schema, sitemap), lint зелёный
 - [x] **E3: AI-видимость (v0.3)** — `daytona-seo-notch-ai`: стратегия mk ai-seo (15 справочников + evals) + исполняемая агентная готовность cs (agentic_check / lighthouse_agentic / agent_ux_check / agentic_fix, приоритеты P0–P3, GEO-скоринг, WebMCP/llms.txt/UCP-справочники); трек аудита и technical-скилл ссылаются на него
-- [ ] E4: маркетинговая широта (~20 скиллов mk)
+- [x] **E4: маркетинговая широта (v0.4)** — 22 скилла mk перенесены (product-marketing фундамент + cro/copywriting/ab-testing/emails/analytics/attribution/conversion-tracking/pricing/offers/launch/link-building/programmatic-seo/site-architecture/content-strategy/customer-research/competitors/cold-email/ads/ad-creative/competitor-profiling); evals 23/23 валидны; cross-link доменов-пересечений; integration-гайды в `tools/integrations/`
 - [ ] E5: drift/MCP/credential workflow
 - [ ] E6: evals + release packaging
 - [ ] Архитектура (`bmad-architecture` в Antigravity) — прогнать черновик PRD интерактивно

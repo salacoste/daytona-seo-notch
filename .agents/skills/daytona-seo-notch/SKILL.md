@@ -38,11 +38,18 @@ Available now (each is its own skill and slash command):
 | `/daytona-seo-notch setup` | Create/refresh the uv runtime and headless Chromium |
 | `/daytona-seo-notch doctor` | Check runtime readiness without changing anything |
 
-Roadmap (not yet ported — do not promise them): images,
-local/maps, ecommerce, Google API/GSC enrichment, backlinks analysis, semantic
-clustering, SXO, drift monitoring, content briefs, hreflang, programmatic SEO,
-strategic plans, FLOW prompts, and the marketing suite. Some of that knowledge is
-already bundled under `references/` (`geo/`, `agentic/`).
+The marketing suite from marketingskills is installed alongside this line as its
+own skills: `/product-marketing` (the shared context every other marketing skill
+reads first), `/cro`, `/copywriting`, `/copy-editing`, `/ab-testing`, `/emails`,
+`/analytics`, `/attribution`, `/conversion-tracking`, `/pricing`, `/offers`,
+`/launch`, `/link-building`, `/programmatic-seo`, `/site-architecture`,
+`/content-strategy`, `/customer-research`, `/competitors`, `/cold-email`,
+`/ads`, `/ad-creative`, `/competitor-profiling`.
+
+Roadmap (not yet ported — do not promise them): images, local/maps, ecommerce,
+Google API/GSC enrichment, backlinks analysis, semantic clustering, SXO, drift
+monitoring, content briefs, hreflang, strategic plans, FLOW prompts, and the
+remaining ~30 marketingskills ports.
 
 ## Runtime Setup
 

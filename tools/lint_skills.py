@@ -18,6 +18,16 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / ".agents" / "skills"
 PREFIX = "daytona-seo-notch"
 
+# marketing skills ported from marketingskills (tools/port_marketing_skills.py)
+MARKETING_SKILLS = {
+    "product-marketing", "cro", "copywriting", "copy-editing", "ab-testing",
+    "emails", "analytics", "attribution", "conversion-tracking", "pricing",
+    "offers", "launch", "link-building", "programmatic-seo",
+    "site-architecture", "content-strategy", "customer-research",
+    "competitors", "cold-email", "ads",
+    "ad-creative", "competitor-profiling",
+}
+
 FORBIDDEN = [
     "CLAUDE_PLUGIN_ROOT",
     "~/.claude",
@@ -96,7 +106,12 @@ def main() -> int:
     if not SKILLS.exists():
         print("no .agents/skills directory", file=sys.stderr)
         return 2
-    folders = sorted(p for p in SKILLS.iterdir() if p.is_dir() and p.name.startswith(PREFIX))
+    # daytona line + ported marketing skills; BMAD's own skills (bmad*/bmod*) are excluded
+    folders = sorted(
+        p
+        for p in SKILLS.iterdir()
+        if p.is_dir() and (p.name.startswith(PREFIX) or p.name in MARKETING_SKILLS)
+    )
     if not folders:
         print(f"no {PREFIX}* skills found", file=sys.stderr)
         return 2
