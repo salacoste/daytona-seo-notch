@@ -25,7 +25,7 @@ MARKETING_SKILLS = {
     "offers", "launch", "link-building", "programmatic-seo",
     "site-architecture", "content-strategy", "customer-research",
     "competitors", "cold-email", "ads",
-    "ad-creative", "competitor-profiling",
+    "ad-creative", "competitor-profiling", "marketing-tools-setup",
 }
 
 FORBIDDEN = [

@@ -32,7 +32,9 @@ sys.path.insert(0, SCRIPTS_DIR)
 
 from google_auth import validate_url  # noqa: E402
 
-DB_DIR = os.path.expanduser("~/.cache/claude-seo/drift")
+# daytona-seo-notch: override with DAYTONA_DRIFT_DIR; default keeps a
+# project-brand cache path (upstream used ~/.cache/claude-seo/drift)
+DB_DIR = os.path.expanduser(os.environ.get("DAYTONA_DRIFT_DIR", "~/.cache/daytona-seo-notch/drift"))
 DB_PATH = os.path.join(DB_DIR, "baselines.db")
 
 # UTM parameters to strip during URL normalization

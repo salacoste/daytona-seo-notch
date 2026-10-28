@@ -46,10 +46,14 @@ reads first), `/cro`, `/copywriting`, `/copy-editing`, `/ab-testing`, `/emails`,
 `/content-strategy`, `/customer-research`, `/competitors`, `/cold-email`,
 `/ads`, `/ad-creative`, `/competitor-profiling`.
 
+Also installed: `/daytona-seo-notch-drift` (baseline/compare/history monitoring,
+SQLite under `~/.cache/daytona-seo-notch/`) and `/marketing-tools-setup` (guided,
+secret-safe connections for the CLIs in `tools/clis/` and MCP servers).
+
 Roadmap (not yet ported — do not promise them): images, local/maps, ecommerce,
-Google API/GSC enrichment, backlinks analysis, semantic clustering, SXO, drift
-monitoring, content briefs, hreflang, strategic plans, FLOW prompts, and the
-remaining ~30 marketingskills ports.
+Google API/GSC enrichment skills, backlinks analysis skill, semantic clustering,
+SXO, content briefs, hreflang, strategic plans, FLOW prompts, and the
+remaining ~28 marketingskills ports.
 
 ## Runtime Setup
 
