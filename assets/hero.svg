@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="daytona-seo-notch: professional SEO and marketing agent skills for Google Antigravity">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#101B33"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F5A623"/>
+      <stop offset="1" stop-color="#FFC963"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="16" fill="url(#bg)"/>
+  <g opacity="0.35">
+    <circle cx="1060" cy="60" r="150" fill="none" stroke="#1C2C4E" stroke-width="1.5"/>
+    <circle cx="1060" cy="60" r="105" fill="none" stroke="#24365C" stroke-width="1.5"/>
+    <circle cx="1060" cy="60" r="60" fill="none" stroke="#2E4470" stroke-width="1.5"/>
+    <circle cx="150" cy="290" r="120" fill="none" stroke="#1C2C4E" stroke-width="1.5"/>
+    <circle cx="150" cy="290" r="75" fill="none" stroke="#24365C" stroke-width="1.5"/>
+  </g>
+  <!-- notch mark -->
+  <g transform="translate(72,64)">
+    <rect x="0" y="0" width="56" height="56" rx="14" fill="url(#amber)"/>
+    <path d="M16 40 L28 16 L40 40" fill="none" stroke="#0B1220" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22 32 H34" stroke="#0B1220" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="152" y="96" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="46" font-weight="800" fill="#F2F6FC">daytona-seo-notch</text>
+  <text x="152" y="136" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" fill="#8CA3C7">Professional SEO &amp; marketing agent skills for Google Antigravity</text>
+  <text x="152" y="164" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" fill="#5F7396">Executable SEO audits on real measured data — cited by AI search, ranked in Google.</text>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="600">
+    <rect x="72" y="204" width="150" height="34" rx="17" fill="#16233E" stroke="#2E4470"/>
+    <text x="147" y="226" fill="#D7E3F7" text-anchor="middle">32 skills</text>
+    <rect x="234" y="204" width="210" height="34" rx="17" fill="#16233E" stroke="#2E4470"/>
+    <text x="339" y="226" fill="#D7E3F7" text-anchor="middle">60-script SEO runtime</text>
+    <rect x="456" y="204" width="190" height="34" rx="17" fill="#16233E" stroke="#2E4470"/>
+    <text x="551" y="226" fill="#D7E3F7" text-anchor="middle">AI / GEO readiness</text>
+    <rect x="655" y="204" width="180" height="34" rx="17" fill="#16233E" stroke="#2E4470"/>
+    <text x="745" y="226" fill="#D7E3F7" text-anchor="middle">drift monitoring</text>
+    <rect x="846" y="204" width="140" height="34" rx="17" fill="#16233E" stroke="#2E4470"/>
+    <text x="916" y="226" fill="#D7E3F7" text-anchor="middle">MIT licensed</text>
+  </g>
+  <text x="72" y="284" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="14" fill="#5F7396">/daytona-seo-notch-audit https://your-site.com  →  health score · action plan · artifacts</text>
+</svg>

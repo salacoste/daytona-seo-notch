@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="daytona-seo-notch architecture: Antigravity reads skills from .agents/skills, skills run the tools runtime, outputs are audit artifacts, drift database and MCP data">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#101B33"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5F7396"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" rx="16" fill="url(#bg2)"/>
+  <style>
+    .t  { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    .m  { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  </style>
+
+  <text x="64" y="64" class="t" font-size="26" font-weight="800" fill="#F2F6FC">How it works</text>
+  <text x="64" y="90" class="t" font-size="15" fill="#8CA3C7">Agent Skills (SKILL.md) orchestrate an executable runtime — every finding is measured, not recalled.</text>
+
+  <!-- Row 1: Antigravity -->
+  <g>
+    <rect x="64" y="120" width="1072" height="86" rx="12" fill="#16233E" stroke="#2E4470"/>
+    <text x="88" y="153" class="t" font-size="17" font-weight="700" fill="#FFC963">Google Antigravity</text>
+    <text x="88" y="178" class="m" font-size="13" fill="#8CA3C7">reads .agents/skills/ natively · every skill becomes a slash command · parallel task planning runs the audit tracks</text>
+    <rect x="880" y="134" width="230" height="26" rx="13" fill="#0F3B2E" stroke="#1E6B52"/>
+    <text x="995" y="151" class="m" font-size="12" fill="#7FD8B2" text-anchor="middle">MCP: .agents/mcp_config.json</text>
+  </g>
+  <line x1="600" y1="206" x2="600" y2="236" stroke="#5F7396" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Row 2: skills columns -->
+  <g>
+    <rect x="64" y="240" width="520" height="150" rx="12" fill="#131F38" stroke="#2E4470"/>
+    <text x="88" y="270" class="t" font-size="16" font-weight="700" fill="#4F8EF7">SEO skill line — daytona-seo-notch*</text>
+    <text x="88" y="296" class="m" font-size="13" fill="#8CA3C7">audit · page · technical · content · schema</text>
+    <text x="88" y="316" class="m" font-size="13" fill="#8CA3C7">sitemap · ai (GEO + agent readiness) · drift</text>
+    <text x="88" y="342" class="t" font-size="12.5" fill="#5F7396">health score 0–100 · E-E-A-T · INP-era CWV · llms.txt / WebMCP checks</text>
+    <text x="88" y="366" class="t" font-size="12.5" fill="#5F7396">adapted from AgriciDaniel/claude-seo (MIT)</text>
+
+    <rect x="616" y="240" width="520" height="150" rx="12" fill="#131F38" stroke="#2E4470"/>
+    <text x="640" y="270" class="t" font-size="16" font-weight="700" fill="#4F8EF7">Marketing suite — marketingskills</text>
+    <text x="640" y="296" class="m" font-size="13" fill="#8CA3C7">product-marketing · cro · copywriting · ab-testing</text>
+    <text x="640" y="316" class="m" font-size="13" fill="#8CA3C7">emails · ads · pricing · offers · link-building · …</text>
+    <text x="640" y="342" class="t" font-size="12.5" fill="#5F7396">shared product-marketing context · per-skill evals</text>
+    <text x="640" y="366" class="t" font-size="12.5" fill="#5F7396">adapted from coreyhaines31/marketingskills (MIT)</text>
+  </g>
+  <line x1="600" y1="390" x2="600" y2="420" stroke="#5F7396" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Row 3: runtime -->
+  <g>
+    <rect x="64" y="424" width="1072" height="96" rx="12" fill="#16233E" stroke="#2E4470"/>
+    <text x="88" y="454" class="t" font-size="16" font-weight="700" fill="#FFC963">Executable runtime — tools/</text>
+    <text x="88" y="482" class="m" font-size="13" fill="#8CA3C7">seo-runtime/  60 Python scripts under uv: render · crawl · parse · PSI/CrUX · schema · sitemap · drift (SQLite) · agentic checks</text>
+    <text x="88" y="504" class="m" font-size="13" fill="#8CA3C7">clis/  66 zero-dependency Node CLIs: GA4 · GSC · Google/Meta/LinkedIn Ads · Ahrefs · Semrush · DataForSEO …</text>
+  </g>
+  <line x1="600" y1="520" x2="600" y2="550" stroke="#5F7396" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Row 4: outputs -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13">
+    <rect x="64" y="554" width="340" height="56" rx="12" fill="#0F3B2E" stroke="#1E6B52"/>
+    <text x="234" y="578" fill="#7FD8B2" text-anchor="middle">{domain}-audit/</text>
+    <text x="234" y="598" fill="#4E8E73" text-anchor="middle" font-size="12">report · action plan · findings</text>
+
+    <rect x="430" y="554" width="340" height="56" rx="12" fill="#0F3B2E" stroke="#1E6B52"/>
+    <text x="600" y="578" fill="#7FD8B2" text-anchor="middle">drift baseline DB</text>
+    <text x="600" y="598" fill="#4E8E73" text-anchor="middle" font-size="12">17 rules · weekly regressions</text>
+
+    <rect x="796" y="554" width="340" height="56" rx="12" fill="#0F3B2E" stroke="#1E6B52"/>
+    <text x="966" y="578" fill="#7FD8B2" text-anchor="middle">free-first data</text>
+    <text x="966" y="598" fill="#4E8E73" text-anchor="middle" font-size="12">CrUX · PSI · Common Crawl · render</text>
+  </g>
+</svg>
