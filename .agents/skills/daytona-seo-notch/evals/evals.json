@@ -1,0 +1,38 @@
+{
+  "skill_name": "daytona-seo-notch",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "our site is broken somehow, not sure what's wrong, can you look at example.com?",
+      "expected_output": "Triggers on vague SEO distress. Hub routes: recommends /daytona-seo-notch-audit for site-wide diagnosis (not page/technical alone), explains what the audit covers and that free data sources suffice.",
+      "assertions": [
+        "Triggers on vague SEO phrasing",
+        "Routes to /daytona-seo-notch-audit",
+        "Does not run the whole audit inline from the hub"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "run /daytona-seo-notch setup",
+      "expected_output": "Runs uv-based setup: forces core env sync via fetch_page.py --help (or equivalent), then offers tools/seo-runtime/run setup-browser for headless Chromium; reports core and browser status separately; never pip-installs to the system.",
+      "assertions": [
+        "Runs the uv sync step",
+        "Offers/reports Chromium setup-browser step separately",
+        "No system-wide pip install"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "is the google spam update finished?",
+      "expected_output": "Answers from the bundled ledger: tools/seo-runtime/run seo_updates.py --kind spam --json; cites Google-owned URLs; checks freshness.stale and caveats recent rollouts instead of answering from memory.",
+      "assertions": [
+        "Uses seo_updates.py, not memory",
+        "Mentions freshness/staleness caveat",
+        "Cites primary sources"
+      ],
+      "files": []
+    }
+  ]
+}

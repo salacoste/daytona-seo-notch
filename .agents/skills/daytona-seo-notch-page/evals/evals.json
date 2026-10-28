@@ -1,0 +1,27 @@
+{
+  "skill_name": "daytona-seo-notch-page",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "analyze this page https://example.com/pricing",
+      "expected_output": "Single-page review across on-page (title 50-60, meta 150-160, one H1), content quality vs page-type minimums (quality-gates), technical (canonical, robots, OG/Twitter), schema detection with ready-to-use JSON-LD for gaps, images (alt, size, format, dimensions, lazy_method nuance), CWV as caveats only (LCP/INP/CLS risks from HTML signals); score card per category.",
+      "assertions": [
+        "Covers on-page, content, technical, schema, images in one pass",
+        "Flags CWV as not measurable from HTML alone",
+        "Outputs per-category scores and prioritized issues"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "page returns 403",
+      "expected_output": "Reports the page is behind authentication; does not guess content; asks for rendered HTML or a public URL.",
+      "assertions": [
+        "Reports auth block clearly",
+        "Does not fabricate page analysis",
+        "Suggests rendered-HTML alternative"
+      ],
+      "files": []
+    }
+  ]
+}

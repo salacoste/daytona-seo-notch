@@ -1,0 +1,27 @@
+{
+  "skill_name": "daytona-seo-notch-schema",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "add schema to https://example.com/product/123",
+      "expected_output": "Detects existing JSON-LD/microdata/RDFa via parse_html.py; validates required properties, absolute URLs, date formats, placeholders; recommends JSON-LD as primary; generates ready-to-use markup from tools/seo-runtime/schema/templates.json; never recommends HowTo (deprecated) or new FAQPage for rich results (retired May 2026), flags existing FAQPage at Info, suggests QAPage for genuine Q&A.",
+      "assertions": [
+        "Detects existing markup with parse_html.py",
+        "Generates from bundled templates",
+        "Applies HowTo/FAQ policy correctly"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "why no rich results for our faq page?",
+      "expected_output": "Explains FAQ rich results retired for all sites May 7 2026 (no SERP feature), so absence is expected; does not recommend removal; checks other eligible types for the page instead.",
+      "assertions": [
+        "States the May 2026 retirement accurately",
+        "Does not recommend removing FAQPage",
+        "Pivots to eligible types"
+      ],
+      "files": []
+    }
+  ]
+}

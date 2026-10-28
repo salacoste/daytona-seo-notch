@@ -1,0 +1,72 @@
+name: ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  quality:
+    name: lint + evals + secrets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skill lint (frontmatter, forbidden patterns, links)
+        run: python3 tools/lint_skills.py
+      - name: Evals valid JSON + skill_name matches folder
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          from pathlib import Path
+          bad = []
+          files = sorted(Path(".agents/skills").glob("*/evals/evals.json"))
+          for f in files:
+              try:
+                  d = json.loads(f.read_text())
+                  folder = f.parents[1].name
+                  if d.get("skill_name") != folder:
+                      bad.append(f"{f}: skill_name {d.get('skill_name')!r} != folder {folder!r}")
+                  if not d.get("evals"):
+                      bad.append(f"{f}: no eval entries")
+              except Exception as e:
+                  bad.append(f"{f}: {e}")
+          for b in bad:
+              print("FAIL:", b)
+          print(f"evals: {len(files)} files checked")
+          sys.exit(1 if bad else 0)
+          EOF
+      - name: Secrets scan (tracked files)
+        run: |
+          ! git grep -InIE "(AIza[0-9A-Za-z_-]{30,}|sk-[A-Za-z0-9]{20,}|-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY-----)" -- . ':!sources/**' ':!*.lock'
+      - name: No .env files tracked
+        run: |
+          [ -z "$(git ls-files | grep -E '^\.env' )" ] && echo "no .env tracked"
+
+  runtime-smoke:
+    name: seo-runtime smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: All scripts compile
+        run: |
+          uvx python -m py_compile tools/seo-runtime/scripts/*.py && echo "60 scripts compile"
+      - name: Core scripts run (uv env bootstrap)
+        run: |
+          tools/seo-runtime/run fetch_page.py --help >/dev/null && echo "fetch_page ok"
+          tools/seo-runtime/run sitemap_discovery.py --help >/dev/null && echo "sitemap_discovery ok"
+          tools/seo-runtime/run parse_html.py --help >/dev/null && echo "parse_html ok"
+          tools/seo-runtime/run agentic_check.py --help >/dev/null && echo "agentic_check ok"
+          tools/seo-runtime/run drift_baseline.py --help >/dev/null && echo "drift_baseline ok"
+      - name: Node CLIs execute (zero-dependency)
+        run: |
+          node --version
+          node tools/clis/ga4.js 2>&1 | grep -q "GA4_ACCESS_TOKEN" && echo "ga4 cli ok"

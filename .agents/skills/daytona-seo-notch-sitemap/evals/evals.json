@@ -1,0 +1,28 @@
+{
+  "skill_name": "daytona-seo-notch-sitemap",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "check our sitemap https://example.com",
+      "expected_output": "Runs sitemap_discovery.py first (never reports missing before discovery); validates XML, <=50k URLs/50MB per file, HTTP 200s, W3C lastmod accuracy, no deprecated priority/changefreq, no non-canonical/noindex/redirected URLs, HTTPS only, robots.txt reference; compares against crawled pages for gaps.",
+      "assertions": [
+        "Uses sitemap_discovery.py before declaring missing",
+        "Checks the 50k/50MB limits",
+        "Checks lastmod accuracy and deprecated tags",
+        "Flags non-canonical/noindex/redirected entries"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "generate a sitemap for our docs site",
+      "expected_output": "Generates from crawled URLs: splits by content type, sitemap index above 50k, absolute HTTPS URLs only, accurate lastmod, references from robots.txt; offers file output paths.",
+      "assertions": [
+        "Splits by content type",
+        "Uses sitemap index when needed",
+        "Updates robots.txt reference"
+      ],
+      "files": []
+    }
+  ]
+}

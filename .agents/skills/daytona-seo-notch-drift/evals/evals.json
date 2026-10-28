@@ -1,0 +1,27 @@
+{
+  "skill_name": "daytona-seo-notch-drift",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "did anything change on our homepage after the deploy?",
+      "expected_output": "drift_compare.py <url> against the latest baseline: 17 rules, severities CRITICAL/WARNING/INFO with response times; offers drift_report.py HTML output; if no baseline exists, explains baseline first.",
+      "assertions": [
+        "Runs compare against stored baseline",
+        "Reports rule-triggered findings by severity",
+        "Suggests baseline capture when none exists"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "start tracking our landing page https://example.com/lp",
+      "expected_output": "drift_baseline.py --skip-cwv offered when no GOOGLE_API_KEY; captures title/meta/canonical/robots/headings/schema/OG/status/hashes; states storage location ~/.cache/daytona-seo-notch/drift and the DAYTONA_DRIFT_DIR override.",
+      "assertions": [
+        "Captures baseline with documented fields",
+        "Handles missing CWV key gracefully",
+        "States storage path"
+      ],
+      "files": []
+    }
+  ]
+}

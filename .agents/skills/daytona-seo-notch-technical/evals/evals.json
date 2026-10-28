@@ -1,0 +1,28 @@
+{
+  "skill_name": "daytona-seo-notch-technical",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "technical seo audit for example.com",
+      "expected_output": "Nine categories: crawlability (robots, sitemap via sitemap_discovery.py, noindex, depth, 2MB Googlebot HTML cap), indexability, security, URLs, mobile, CWV, rendering (JS-dependent content), structured data plumbing, IndexNow; includes the AI-crawler robots.txt management table with correct purpose distinctions (GPTBot training vs OAI-SearchBot citability, Google-Extended scope).",
+      "assertions": [
+        "Covers the nine categories",
+        "Uses sitemap_discovery.py for sitemap discovery",
+        "Distinguishes AI crawler purposes correctly",
+        "Mentions Googlebot 2MB fetch cap"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "should we block gptbot to protect our content?",
+      "expected_output": "Explains blocking GPTBot stops OpenAI training only; ChatGPT Search citability is governed by OAI-SearchBot; asks about the user's training vs discovery goals before recommending; notes blocking a search crawler removes the site from that engine's answers.",
+      "assertions": [
+        "Separates training from search-discovery crawlers",
+        "Asks about intent before recommending",
+        "Notes citability consequences"
+      ],
+      "files": []
+    }
+  ]
+}

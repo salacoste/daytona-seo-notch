@@ -1,0 +1,27 @@
+{
+  "skill_name": "daytona-seo-notch-content",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "is our blog content good enough to rank? https://example.com/blog",
+      "expected_output": "Applies Google Who/How/Why test first, then E-E-A-T sub-factors (Sept 2025 QRG), thin-content thresholds per page type from quality-gates, readability, AI-citation readiness; scores are labeled heuristics, not Google-internal signals.",
+      "assertions": [
+        "Applies Who/How/Why first",
+        "Uses quality-gates thresholds",
+        "Labels scores as heuristics"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "rewrite this so it doesn't sound ai-generated",
+      "expected_output": "Runs last-mile cleanup: AI-typical phrasing and invisible Unicode watermark characters (content_humanize/content_verify path), preserves facts and structure, flags rather than silently rewrites anything ambiguous.",
+      "assertions": [
+        "Targets AI-typical phrasing and watermark characters",
+        "Preserves facts",
+        "Uses the bundled scripts where available"
+      ],
+      "files": []
+    }
+  ]
+}
