@@ -36,6 +36,10 @@ variable. To audit a static build without any server:
 
 ## Phase 0 — Strategy (before the first component is written)
 
+0. **If there is no brief yet:** run `/daytona-seo-notch-brief` first — client
+   intake, local scan of existing material, and the agreed query set. Phase 0
+   consumes its artifacts (`brief-<slug>/`, `queries.md`) instead of
+   re-asking the client.
 1. **Fix the site type** with the user: corporate / landing / blog / hybrid —
    it changes everything downstream (see site-types reference).
 2. **Demand and semantics:** target queries, language(s)/markets (Yandex vs

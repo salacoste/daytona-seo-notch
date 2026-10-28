@@ -28,12 +28,13 @@ Two excellent open-source libraries already cover this space — but each is hal
 
 This repo merges the best implementation of every domain (decision matrix in the [PRD](\_bmad-output/initiative-antigravity-marketing-seo/prd-antigravity-marketing-seo/prd-antigravity-marketing-seo.md)), strips every Claude Code binding (`CLAUDE_PLUGIN_ROOT`, subagent idioms, hooks, `~/.claude` paths), and rewires orchestration for Antigravity's task planning. Both upstreams are MIT; full attribution in [`sources/PROVENANCE.md`](sources/PROVENANCE.md).
 
-## What's inside — 34 skills
+## What's inside — 35 skills
 
 ### 🔎 SEO line (`daytona-seo-notch*`, from claude-seo)
 
 | Skill | What it does |
 |---|---|
+| [`/daytona-seo-notch-brief`](.agents/skills/daytona-seo-notch-brief/SKILL.md) | **Intake for new client sites**: brief → local scan of existing code/content → agreed query set with search volume (Keyword Planner, DataForSEO, Wordstat flow) |
 | [`/daytona-seo-notch-prelaunch`](.agents/skills/daytona-seo-notch-prelaunch/SKILL.md) | **SEO before publication**: strategy → page templates → pre-launch gate (audit of `localhost`/`dist`) → go-live switch. Corporate sites, landing pages, blogs |
 | [`/daytona-seo-notch`](.agents/skills/daytona-seo-notch/SKILL.md) | Hub: routing, runtime setup, 10-principle synthesis (PERCEIVE→ACT), quality gates, health-score weights |
 | [`/daytona-seo-notch-audit`](.agents/skills/daytona-seo-notch-audit/SKILL.md) | **Full site audit**: crawl ≤500 pages, parallel analysis tracks, 0–100 score, artifacts in `{domain}-audit/` |

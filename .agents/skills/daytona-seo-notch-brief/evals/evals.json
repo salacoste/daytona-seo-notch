@@ -1,0 +1,53 @@
+{
+  "skill_name": "daytona-seo-notch-brief",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "новый клиент, делаем ему сайт с нуля. с чего начать по seo?",
+      "expected_output": "Routes to the intake flow, not the audit: Stage A client brief (batched questions from client-brief.md), asks whether any materials/code already exist for Stage B, notes RU-market question (Yandex vs Google) if the client is RU/CIS, and explains the end artifact chain (brief → local scan → agreed queries → prelaunch handoff).",
+      "assertions": [
+        "Starts the brief, not an audit",
+        "Asks about existing materials",
+        "Mentions Yandex/Google priority for RU",
+        "Names the artifact chain"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "вот папка проекта, там половина страниц уже свёрстана и есть тексты. разбери что уже есть",
+      "expected_output": "Runs the local scan: identity files → content inventory (per-file H1/title/meta/words/flags) → SEO signals in code → stack verdict (SSR/SSG/SPA, CMS, analytics) → native-vocabulary candidate queries, every fact cited to a file path, unknowns left as unknown; produces local-scan.md and marks which brief fields are answered from code.",
+      "assertions": [
+        "Follows the local-scan method",
+        "Inventory table per content file",
+        "Stack verdict stated",
+        "Facts cite file paths"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "сможем узнать частотность запросов? у клиента есть доступ к google ads, яндекса директа нет",
+      "expected_output": "Honest capability answer: yes via Google Keyword Planner (keyword_planner.py volume/ideas with --language/--location for RU market; ranged volumes without ad spend; needs google dependency group + OAuth), DataForSEO as paid exact alternative, Yandex Wordstat without Direct = semi-manual flow (links + paste-back, never fabricated), Trends for relative direction. Offers to run KP once credentials are connected.",
+      "assertions": [
+        "Keyword Planner as the primary with real commands",
+        "Ranged-volume honesty stated",
+        "Wordstat semi-manual flow explained",
+        "No fabricated numbers promised"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "вот список запросов, согласуем и планируем стратегию",
+      "expected_output": "Builds the agreement table (query · intent · target page type · priority · status), gets explicit per-query sign-off, then hands off to daytona-seo-notch-prelaunch Phase 0 with the brief and queries.md artifacts, stating which volume source produced each number present.",
+      "assertions": [
+        "Agreement gate before planning",
+        "Table with intent and page types",
+        "Hands off to prelaunch Phase 0",
+        "Volume sources labeled"
+      ],
+      "files": []
+    }
+  ]
+}
