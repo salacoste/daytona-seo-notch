@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEO Skills for Google Antigravity — Executable SEO Audits | daytona-seo-notch</title>
+  <meta name="description" content="Open-source SEO and marketing agent skills for Google Antigravity: full-site audits on real data, technical SEO, Core Web Vitals, schema markup, E-E-A-T, AI search visibility (GEO/AEO) and drift monitoring. MIT.">
+  <link rel="canonical" href="https://salacoste.github.io/daytona-seo-notch/">
+  <meta name="theme-color" content="#ff5c00">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/spacechemical.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="daytona-seo-notch">
+  <meta property="og:title" content="SEO Skills for Google Antigravity — daytona-seo-notch">
+  <meta property="og:description" content="Executable SEO audits, AI search visibility and a 22-skill marketing suite as native Antigravity agent skills. Real data, free sources, MIT.">
+  <meta property="og:url" content="https://salacoste.github.io/daytona-seo-notch/">
+  <meta property="og:image" content="https://opengraph.githubassets.com/1/salacoste/daytona-seo-notch">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEO Skills for Google Antigravity — daytona-seo-notch">
+  <meta name="twitter:description" content="Executable SEO audits, AI search visibility and a 22-skill marketing suite as native Antigravity agent skills.">
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1/salacoste/daytona-seo-notch">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "daytona-seo-notch",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Linux",
+    "description": "Professional SEO and marketing agent skills for Google Antigravity: executable site audits on real measured data, AI search visibility (GEO/AEO), schema markup, E-E-A-T content analysis, Core Web Vitals and drift monitoring.",
+    "url": "https://salacoste.github.io/daytona-seo-notch/",
+    "softwareVersion": "1.0",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "license": "https://github.com/salacoste/daytona-seo-notch/blob/main/LICENSE",
+    "programmingLanguage": "Python, JavaScript, Markdown",
+    "isBasedOn": [
+      "https://github.com/AgriciDaniel/claude-seo",
+      "https://github.com/coreyhaines31/marketingskills"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does daytona-seo-notch work with Claude Code, Cursor or Codex?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The skills follow the open Agent Skills format (SKILL.md), so any tool that reads .agents/skills/ can use them. The runtime needs uv with Python 3.11+, the data CLIs need Node 18+. The repo is tuned for Google Antigravity: native slash-command discovery, task-planned audit tracks and MCP config." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is it different from claude-seo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Same executable DNA — 60 Python scripts, MIT, fully attributed — with all Claude Code bindings removed: no CLAUDE_PLUGIN_ROOT, no subagents or hooks, a uv-managed runtime inside the repo, plus the merged AI-visibility domain and a 22-skill marketing suite from marketingskills." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the SEO audit data really free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The default audit path runs on free sources: headless rendering, robots.txt and sitemap analysis, Common Crawl domain metrics, and PageSpeed/CrUX where keyless access allows. A free GOOGLE_API_KEY unlocks field Core Web Vitals; paid providers like DataForSEO or Ahrefs are strictly opt-in via MCP or CLIs." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to run against client sites?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The audit is read-only and respects robots.txt. The only active probe (a WAF user-agent matrix) is explicitly gated behind owner authorization. API keys stay in a local 0600 .env.marketing file that CI verifies is never committed." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="daytona-seo-notch — home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M18 45 L32 19 L46 45" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 36 H39" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round"/></svg>
+        </span>
+        daytona-seo-notch
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/daytona-seo-notch/skills/">Skills</a>
+        <a href="#how">How it works</a>
+        <a href="#quickstart">Quickstart</a>
+        <a href="https://github.com/salacoste/daytona-seo-notch">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div>
+          <p class="eyebrow">Open source · MIT · Agent Skills for Google Antigravity</p>
+          <h1 id="hero-title">SEO audits on <span class="accent">real data</span>, not memory</h1>
+          <p class="lead">Professional SEO and marketing skill library for Google Antigravity. Give it a URL — it renders, crawls and measures, then hands you a prioritized action plan with a 0–100 health score.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quickstart">Run your first audit</a>
+            <a class="btn btn-secondary" href="https://github.com/salacoste/daytona-seo-notch">View on GitHub</a>
+          </div>
+          <div class="hero-meta">
+            <span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.5 3l-7.5 7.5L2.5 7 1 8.5l5 5 9-9z"/></svg>32 skills, lint-clean</span>
+            <span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.5 3l-7.5 7.5L2.5 7 1 8.5l5 5 9-9z"/></svg>60-script runtime</span>
+            <span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.5 3l-7.5 7.5L2.5 7 1 8.5l5 5 9-9z"/></svg>Free data sources first</span>
+            <span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.5 3l-7.5 7.5L2.5 7 1 8.5l5 5 9-9z"/></svg>AI / GEO readiness checks</span>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Example audit session">
+          <div class="tbar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p><span class="c">$</span> /daytona-seo-notch-audit https://your-site.com</p>
+          <p><span class="o">→</span> rendering homepage · detecting business type</p>
+          <p><span class="o">→</span> crawling ≤500 pages · robots.txt respected</p>
+          <p><span class="o">→</span> tracks: technical · content · schema · sitemap</p>
+          <p><span class="o">→</span> ai-readiness · cwv · drift baseline</p>
+          <p><span class="g">✓</span> SEO Health Score: <span class="g">72/100</span></p>
+          <p><span class="g">✓</span> 14 findings · action plan → your-site.com-audit/</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IT MEASURES -->
+    <section class="section" aria-labelledby="measure-title">
+      <div class="container">
+        <p class="eyebrow">What the audit measures</p>
+        <h2 id="measure-title">Everything a consultant would check</h2>
+        <div class="grid grid-3" style="margin-top:var(--space-8)">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h7"/></svg></span>
+            <h3>Technical SEO</h3>
+            <p>Robots.txt with per-purpose AI crawler rules, sitemaps, canonicals, redirects, the 2&nbsp;MB Googlebot fetch cap, JS rendering, security headers, IndexNow.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6.25C13 4.75 15 4 17 4c2 0 3 .75 3 2.5S18.5 9 16.5 9C14 9 12.75 7.75 12 6.25zM12 6.25C11 4.75 9 4 7 4 5 4 4 4.75 4 6.5S5.5 9 7.5 9C10 9 11.25 7.75 12 6.25zM12 6.25V20M6.5 20h11"/></svg></span>
+            <h3>Content &amp; E-E-A-T</h3>
+            <p>Google's Who/How/Why test, Sept&nbsp;2025 QRG criteria, thin-content thresholds per page type, readability, freshness, AI-citation readiness.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3M12 1v22"/></svg></span>
+            <h3>Schema markup</h3>
+            <p>JSON-LD, microdata and RDFa detection, validation, ready-to-paste generation from templates, and the 2024–2026 deprecation policy (HowTo, FAQ).</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+            <h3>Core Web Vitals</h3>
+            <p>INP-era thresholds. Lab signals by default; field data (PSI + CrUX) with a free Google API key — no paid tools required.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+            <h3>AI search readiness</h3>
+            <p>llms.txt with the actual evidence, Markdown delivery, WebMCP, Lighthouse Agentic Browsing X/N, accessibility tree for agents — P0–P3 priorities.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+            <h3>Drift monitoring</h3>
+            <p>SQLite baselines and 17 comparison rules: run <code class="inline">drift compare</code> after every deploy and catch regressions before Google does.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="section band-inverse" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title">Skills orchestrate an executable runtime</h2>
+        <p class="lead" style="margin-top:var(--space-4)">Agent Skills (<code class="inline">SKILL.md</code>) that Antigravity reads natively — every skill becomes a slash command; every finding comes from a script that fetched, rendered or measured it.</p>
+        <div class="grid grid-3" style="margin-top:var(--space-8)">
+          <article class="card">
+            <p class="kicker">Layer 1</p>
+            <h3>Antigravity-native skills</h3>
+            <p>9-skill SEO line (<code class="inline">daytona-seo-notch*</code>) + a 22-skill marketing suite, zero Claude Code bindings: no plugin roots, no subagent idioms, no hooks.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Layer 2</p>
+            <h3>Executable runtime</h3>
+            <p>60 Python scripts under uv — render, crawl, parse, PSI/CrUX, sitemap discovery, schema generation, drift engine, agentic checks. Plus 66 zero-dependency Node CLIs.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">Layer 3</p>
+            <h3>Free-first data</h3>
+            <p>Rendering, robots/sitemap, Common Crawl and keyless PSI/CrUX by default. Paid providers (DataForSEO, Ahrefs, AIsa) are opt-in through Antigravity's MCP config.</p>
+          </article>
+        </div>
+        <p style="margin-top:var(--space-8)"><a class="btn btn-primary" href="/daytona-seo-notch/skills/">Browse all 32 skills →</a></p>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section" aria-labelledby="compare-title">
+      <div class="container">
+        <p class="eyebrow">Where it comes from</p>
+        <h2 id="compare-title">The best of two proven libraries, merged</h2>
+        <div class="table-wrap" style="margin-top:var(--space-8)">
+          <table>
+            <thead>
+              <tr><th scope="col">Capability</th><th scope="col">claude-seo</th><th scope="col">marketingskills</th><th scope="col">daytona-seo-notch</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Executable technical SEO audits</td><td class="yes">60 scripts</td><td class="no">advisory</td><td class="yes">best of claude-seo</td></tr>
+              <tr><td>Marketing breadth (CRO, copy, ads, email)</td><td class="no">—</td><td class="yes">52 skills</td><td class="yes">22 ported</td></tr>
+              <tr><td>AI search / GEO / agent readiness</td><td>technical half</td><td>strategy half</td><td class="yes">merged into one skill</td></tr>
+              <tr><td>Drift monitoring (SQLite)</td><td class="yes">yes</td><td class="no">—</td><td class="yes">yes</td></tr>
+              <tr><td>Target IDE</td><td>Claude Code</td><td>Claude Code / Codex / Cursor</td><td class="yes">Antigravity-native</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:var(--space-4);color:var(--color-ink-muted);font-size:0.9375rem">Both upstreams are MIT; the merge decision matrix is public in the <a href="https://github.com/salacoste/daytona-seo-notch/blob/main/docs/analysis-repos.md">repository analysis</a>.</p>
+      </div>
+    </section>
+
+    <!-- QUICKSTART -->
+    <section class="section band-inverse" id="quickstart" aria-labelledby="qs-title">
+      <div class="container">
+        <p class="eyebrow">Quickstart</p>
+        <h2 id="qs-title">Clone, open in Antigravity, audit</h2>
+        <div class="grid grid-2" style="margin-top:var(--space-8); align-items:start">
+          <div class="terminal">
+            <div class="tbar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <p><span class="c"># 1 — clone</span></p>
+            <p>git clone https://github.com/salacoste/daytona-seo-notch.git</p>
+            <p>cd daytona-seo-notch</p>
+            <p>&nbsp;</p>
+            <p><span class="c"># 2 — open the folder in Antigravity, then:</span></p>
+            <p><span class="o">/daytona-seo-notch setup</span></p>
+            <p><span class="o">/daytona-seo-notch-audit https://your-site.com</span></p>
+            <p>&nbsp;</p>
+            <p><span class="c"># 3 — optional unlocks</span></p>
+            <p><span class="g">GOOGLE_API_KEY</span> → field Core Web Vitals</p>
+            <p><span class="o">/marketing-tools-setup</span> → GA4, GSC, Ads, MCP</p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div><h3>Install once</h3><p style="color:#b5b5b5;font-size:0.9375rem">Setup builds an isolated uv environment and headless Chromium inside the repo. Nothing touches your system Python.</p></div>
+            </div>
+            <div class="step">
+              <div><h3>Audit with zero keys</h3><p style="color:#b5b5b5;font-size:0.9375rem">The default path is entirely free: rendering, crawling, robots/sitemap, Common Crawl. Results land in <code class="inline">{domain}-audit/</code> with a full action plan.</p></div>
+            </div>
+            <div class="step">
+              <div><h3>Monitor weekly</h3><p style="color:#b5b5b5;font-size:0.9375rem">Capture a drift baseline, then compare after every deploy. 17 rules, three severity levels, zero surprises.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Common questions</h2>
+        <div class="faq" style="margin-top:var(--space-8)">
+          <details>
+            <summary>Does this work with Claude Code, Cursor or Codex?</summary>
+            <div>The skills follow the open Agent Skills format (<code class="inline">SKILL.md</code>), so any tool that reads <code class="inline">.agents/skills/</code> can use them. The runtime needs uv with Python 3.11+, the data CLIs need Node 18+. This repo is tuned for Google Antigravity: native slash-command discovery, task-planned audit tracks and MCP config.</div>
+          </details>
+          <details>
+            <summary>How is it different from claude-seo?</summary>
+            <div>Same executable DNA — 60 Python scripts, MIT, fully attributed — with every Claude Code binding removed: no <code class="inline">CLAUDE_PLUGIN_ROOT</code>, no subagents or hooks, a uv-managed runtime inside the repo, plus the merged AI-visibility domain and the marketing suite from marketingskills.</div>
+          </details>
+          <details>
+            <summary>Is the SEO audit data really free?</summary>
+            <div>Yes. The default audit path runs on free sources: headless rendering, robots.txt and sitemap analysis, Common Crawl domain metrics, and PageSpeed/CrUX where keyless access allows. A free <code class="inline">GOOGLE_API_KEY</code> unlocks field Core Web Vitals; paid providers like DataForSEO or Ahrefs are strictly opt-in via MCP or CLIs.</div>
+          </details>
+          <details>
+            <summary>Is it safe to run against client sites?</summary>
+            <div>The audit is read-only and respects robots.txt. The only active probe (a WAF user-agent matrix) is explicitly gated behind owner authorization. API keys stay in a local 0600 <code class="inline">.env.marketing</code> file that CI verifies is never committed.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a class="brand" href="/" style="margin-bottom:var(--space-4)">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M18 45 L32 19 L46 45" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 36 H39" stroke="#1d1d1d" stroke-width="8" stroke-linecap="round"/></svg></span>
+          daytona-seo-notch
+        </a>
+        <p style="max-width:34ch">Executable SEO &amp; marketing agent skills for Google Antigravity. Merges <a href="https://github.com/AgriciDaniel/claude-seo">claude-seo</a> + <a href="https://github.com/coreyhaines31/marketingskills">marketingskills</a> (MIT).</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/daytona-seo-notch/skills/">All skills</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#quickstart">Quickstart</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="https://github.com/salacoste/daytona-seo-notch">GitHub</a></li>
+          <li><a href="https://github.com/salacoste/daytona-seo-notch/blob/main/CONTRIBUTING.md">Contributing</a></li>
+          <li><a href="https://github.com/salacoste/daytona-seo-notch/blob/main/LICENSE">License (MIT)</a></li>
+          <li><a href="https://github.com/salacoste/daytona-seo-notch/actions">CI</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
