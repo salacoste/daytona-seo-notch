@@ -1,0 +1,35 @@
+{
+  "_comment": "Шаблон MCP-серверов данных для Antigravity. Скопировать в .agents/mcp_config.json (не коммитится) и заполнить ключи через переменные окружения или .env. Схема: antigravity.google/docs/mcp — mcpServers, ровно один transport на сервер (command | serverUrl).",
+  "mcpServers": {
+    "dataforseo": {
+      "_comment": "Платные SEO-данные: serp, backlinks, keywords, maps. Ключи: https://dataforseo.com. Источник: claude-seo extensions/dataforseo.",
+      "command": "npx",
+      "args": ["-y", "dataforseo-mcp"],
+      "env": {
+        "DATAFORSEO_LOGIN": "<from .env.marketing>",
+        "DATAFORSEO_PASSWORD": "<from .env.marketing>"
+      },
+      "disabled": true
+    },
+    "firecrawl": {
+      "_comment": "Краул/рендер страниц как сервис. Бесплатный tier. Источник: claude-seo extensions/firecrawl.",
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "<from .env.marketing>"
+      },
+      "disabled": true
+    },
+    "bing-webmaster": {
+      "_comment": "Данные индексации Bing. Бесплатно. Источник: claude-seo extensions/bing-webmaster.",
+      "command": "npx",
+      "args": ["-y", "bing-webmaster-mcp"],
+      "disabled": true
+    },
+    "aisa": {
+      "_comment": "Опционально: агрегатор SEO/соцданных (Similarweb, Semrush, Ahrefs, DataForSEO…) pay-as-you-go. Партнёр marketingskills — подключать по желанию, см. sources/marketingskills/tools/aisa.",
+      "serverUrl": "https://mcp.aisa.one/mcp",
+      "disabled": true
+    }
+  }
+}

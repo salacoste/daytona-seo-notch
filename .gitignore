@@ -1,0 +1,26 @@
+# Секреты и локальное окружение
+.env
+.env.*
+!.env.example
+.agents/mcp_config.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.uv/
+
+# Runtime-артефакты аудитов
+*-audit/
+chromium/
+.playwright/
+
+# OS
+.DS_Store
+
+# BMAD personal (пользовательские ответы не коммитим; custom/ — коммитим)
+.bmad-help-setup-*.toml
+
+# Локальные state каталогов IDE/агентов
+.claude/
+.omc/
