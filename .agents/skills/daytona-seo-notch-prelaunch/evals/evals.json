@@ -1,0 +1,53 @@
+{
+  "skill_name": "daytona-seo-notch-prelaunch",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "мы сейчас верстаем корпоративный сайт, он ещё не запущен. что делать с seo до публикации?",
+      "expected_output": "Recognizes the pre-launch scenario (site not yet published) and routes to this skill instead of the live audit. Outlines the four phases (strategy → build → pre-launch gate → go-live switch), asks for the site type confirmation (corporate playbook), and offers the localhost/dev-server audit path via CLAUDE_SEO_LOCAL_TARGETS. Does not attempt a live-site audit of a nonexistent URL.",
+      "assertions": [
+        "Routes to prelaunch, not the live audit",
+        "Names the four phases",
+        "Mentions localhost allowlist mechanism",
+        "Asks/confirms the site type"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "our dev server is on localhost:3000, run the pre-launch gate on the build",
+      "expected_output": "Sets/uses CLAUDE_SEO_LOCAL_TARGETS=localhost:3000, runs the gate: audit tracks against http://localhost:3000/ (technical, content, schema, sitemap), sitemap generation, AI-readiness, and captures the pre-launch drift baseline. Reports a health score as the gate metric and the type-specific checklist items.",
+      "assertions": [
+        "Uses the localhost allowlist env",
+        "Runs audit tracks against the dev URL",
+        "Generates/validates the sitemap",
+        "Captures a drift baseline"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "we launch tomorrow, what's the go-live checklist?",
+      "expected_output": "Gives the ordered Phase 3 switch list: HTTPS/redirect map, remove noindex (with verification command), robots+sitemap+GSC/Yandex Webmaster submission, analytics firing, first production audit, production drift baseline, IndexNow ping — emphasizing zero decisions on launch day, everything pre-decided in Phases 0-2.",
+      "assertions": [
+        "Ordered switch checklist",
+        "noindex removal with verification",
+        "Analytics + Search Console steps",
+        "Prod drift baseline captured"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "it's a single landing page for a product launch",
+      "expected_output": "Applies the landing playbook: narrow query set, above-fold server-rendered, single H1 = the offer, real FAQ (QAPage note, FAQ rich results retired), WebMCP for the form, strict CWV, deep daytona-seo-notch-page pass as the main gate, conversion tracking verified, drift baseline immediately since landing copy iterates.",
+      "assertions": [
+        "Landing-specific gate items",
+        "Single-page deep pass offered",
+        "FAQ/HowTo policy stated correctly",
+        "Drift-baseline rationale for iterating copy"
+      ],
+      "files": []
+    }
+  ]
+}

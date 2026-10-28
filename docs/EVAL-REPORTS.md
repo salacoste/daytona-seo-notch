@@ -4,9 +4,9 @@ Deterministic harness (`tools/run_evals.py`, runs in CI): structural
 validity of every `evals.json` + trigger coverage (eval-prompt terms
 present in the skill description the host agent sees).
 
-## Run 2026-10-28T22:28:14+03:00
+## Run 2026-10-28T22:58:27+03:00
 
-**33 skills, 235 eval cases, 0 failure(s)**
+**34 skills, 239 eval cases, 0 failure(s)**
 
 | Skill | Eval cases | Trigger gate | Mean coverage | Notes |
 |---|---|---|---|
@@ -31,6 +31,7 @@ present in the skill description the host agent sees).
 | daytona-seo-notch-content | 2 | PASS | 61% | ok |
 | daytona-seo-notch-drift | 2 | PASS | 54% | ok |
 | daytona-seo-notch-page | 2 | PASS | 45% | ok |
+| daytona-seo-notch-prelaunch | 4 | PASS | 66% | ok |
 | daytona-seo-notch-schema | 2 | PASS | 62% | ok |
 | daytona-seo-notch-sitemap | 2 | PASS | 54% | ok |
 | daytona-seo-notch-technical | 2 | PASS | 46% | ok |

@@ -20,7 +20,9 @@ metadata:
 Comprehensive SEO analysis across all industries (SaaS, local services,
 e-commerce, publishers, agencies). This hub routes to the daytona-seo-notch
 line; the audit core covers technical SEO, content/E-E-A-T, schema, sitemaps,
-single-page reviews and full-site audits on real measured data.
+single-page reviews and full-site audits on real measured data. Building a
+site that is not published yet? Start with `/daytona-seo-notch-prelaunch` —
+it runs the same machinery against a dev server or `dist/` build.
 
 ## Quick Reference
 
@@ -28,6 +30,7 @@ Available now (each is its own skill and slash command):
 
 | Command | What it does |
 |---------|-------------|
+| `/daytona-seo-notch-prelaunch` | **SEO before publication**: strategy → build templates → pre-launch gate (localhost/dist audit) → go-live switch — for corporate sites, landing pages and blogs still in development |
 | `/daytona-seo-notch-audit <url>` | Full website audit: crawl, analysis tracks, SEO Health Score, action plan |
 | `/daytona-seo-notch-page <url>` | Deep single-page analysis |
 | `/daytona-seo-notch-technical <url>` | Technical SEO audit (9 categories incl. AI crawler management) |
