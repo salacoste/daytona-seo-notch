@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# daytona-seo-notch runtime launcher.
+# Same interface as upstream claude-seo: `run <script>.py [args...]`,
+# but managed by uv instead of Claude Code's plugin environment:
+#   tools/seo-runtime/run fetch_page.py --url https://example.com --json
+#
+# First call creates .venv via `uv sync` (needs https://pypi.org).
+# Headless Chromium for render_page.py: `tools/seo-runtime/run setup-browser`
+
+here="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+export UV_PROJECT_ENVIRONMENT="${here}/.venv"
+
+if ! command -v uv >/dev/null 2>&1; then
+    echo "uv is required (https://docs.astral.sh/uv/). Install: curl -LsSf https://astral.sh/uv/install.sh | sh" >&2
+    exit 2
+fi
+
+if [ "${1:-}" = "setup-browser" ]; then
+    cd "${here}"
+    uv sync --quiet
+    uv run --quiet playwright install chromium
+    echo "Chromium installed for render_page.py"
+    exit 0
+fi
+
+if [ $# -eq 0 ]; then
+    echo "usage: tools/seo-runtime/run <script>.py [args...]   (scripts: ${here}/scripts/)" >&2
+    echo "       tools/seo-runtime/run setup-browser            (install headless Chromium)" >&2
+    exit 2
+fi
+
+script="$1"
+shift
+
+case "${script}" in
+    */*) echo "script name must be a bare filename from scripts/, not a path: ${script}" >&2; exit 2 ;;
+    *.py) ;;
+    *) script="${script}.py" ;;
+esac
+
+if [ ! -f "${here}/scripts/${script}" ]; then
+    echo "unknown script: ${script} (expected one of $(ls "${here}/scripts" | tr '\n' ' '))" >&2
+    exit 2
+fi
+
+cd "${here}"
+exec uv run --quiet python "scripts/${script}" "$@"
