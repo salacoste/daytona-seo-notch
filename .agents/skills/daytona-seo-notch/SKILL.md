@@ -31,14 +31,14 @@ Available now (each is its own skill and slash command):
 | `/daytona-seo-notch-audit <url>` | Full website audit: crawl, analysis tracks, SEO Health Score, action plan |
 | `/daytona-seo-notch-page <url>` | Deep single-page analysis |
 | `/daytona-seo-notch-technical <url>` | Technical SEO audit (9 categories incl. AI crawler management) |
+| `/daytona-seo-notch-ai <url>` | AI visibility: strategy (citations, prompts, presence) + executable agent-readiness audit (llms.txt, WebMCP, Lighthouse Agentic) |
 | `/daytona-seo-notch-content <url>` | E-E-A-T and content quality analysis |
 | `/daytona-seo-notch-schema <url>` | Detect, validate, and generate Schema.org markup |
 | `/daytona-seo-notch-sitemap <url or generate>` | Analyze or generate XML sitemaps |
 | `/daytona-seo-notch setup` | Create/refresh the uv runtime and headless Chromium |
 | `/daytona-seo-notch doctor` | Check runtime readiness without changing anything |
 
-Roadmap (not yet ported — do not promise them): standalone geo/agentic readiness
-skills (core AI-crawler checks already live inside the technical skill), images,
+Roadmap (not yet ported — do not promise them): images,
 local/maps, ecommerce, Google API/GSC enrichment, backlinks analysis, semantic
 clustering, SXO, drift monitoring, content briefs, hreflang, programmatic SEO,
 strategic plans, FLOW prompts, and the marketing suite. Some of that knowledge is
@@ -134,8 +134,7 @@ Load these on-demand as needed (do NOT load all at startup):
 - `references/eeat-framework.md`: E-E-A-T evaluation criteria (Sept 2025 QRG update)
 - `references/eeat-scoring-guide.md`: E-E-A-T score bands and improvement actions
 - `references/quality-gates.md`: Content length minimums, uniqueness thresholds
-- `references/geo/google-ai-optimization-guide.md`, `references/geo/llmstxt-evidence.md`: AI search optimization knowledge (until the dedicated geo skill lands)
-- `references/agentic/lighthouse-agentic-category.md`: Lighthouse Agentic Browsing category (until the dedicated agentic skill lands)
+- AI-search knowledge (Google AI guide, llms.txt evidence, WebMCP, vendor matrix, Lighthouse Agentic) lives in `../daytona-seo-notch-ai/references/`
 
 ## Scoring Methodology
 

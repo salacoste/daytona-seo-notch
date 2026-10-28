@@ -21,7 +21,7 @@
 - [x] BMAD установлен и настроен (v6.13.0-next, initiative создана)
 - [x] Product brief + PRD draft + Goal (`docs/GOAL.md`)
 - [x] **E1–E2: каркас + ядро аудита end-to-end** — runtime `tools/seo-runtime/` (60 скриптов, uv, проверен на живых URL) + 7 скиллов `daytona-seo-notch*` (orchestrator, audit, page, technical, content, schema, sitemap), lint зелёный
-- [ ] E3: AI-видимость (мерж ai-seo + агентная готовность)
+- [x] **E3: AI-видимость (v0.3)** — `daytona-seo-notch-ai`: стратегия mk ai-seo (15 справочников + evals) + исполняемая агентная готовность cs (agentic_check / lighthouse_agentic / agent_ux_check / agentic_fix, приоритеты P0–P3, GEO-скоринг, WebMCP/llms.txt/UCP-справочники); трек аудита и technical-скилл ссылаются на него
 - [ ] E4: маркетинговая широта (~20 скиллов mk)
 - [ ] E5: drift/MCP/credential workflow
 - [ ] E6: evals + release packaging
