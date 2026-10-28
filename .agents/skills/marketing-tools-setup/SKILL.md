@@ -52,6 +52,7 @@ Build a template with only the chosen tool's variables (empty quoted values; the
 | GSC | `GSC_ACCESS_TOKEN` |
 | Stripe | `STRIPE_API_KEY` (restricted, customer-read, sandbox first) |
 | PageSpeed/CrUX (free) | `GOOGLE_API_KEY` — also powers `tools/seo-runtime/run pagespeed_check.py` |
+| Yandex Metrika | `YANDEX_METRIKA_TOKEN`; optional `YANDEX_METRIKA_COUNTER_ID` (OAuth scope `metrika:read`) |
 
 Verify ignore rules **before** saving: `git check-ignore .env.marketing` must succeed. Refresh tokens and app secrets belong in the user's secret manager, not in this file. The CLIs consume access tokens and do not refresh them.
 
@@ -63,6 +64,7 @@ Follow the official flow for the selected tool (scoped guidance lives in `tools/
 - Meta/LinkedIn: app tied to the intended business/account; request `ads_read` / `r_ads`-family read scopes for a first report; check ad-access approval status before proceeding (external gate — pause that tool while pending, continue others).
 - GA4/GSC: OAuth access token with `analytics.readonly` / Search Console read scope; numeric GA4 property ID (not `G-…`).
 - Stripe: restricted key with customer-read only, in a sandbox.
+- Yandex Metrika: OAuth app at oauth.yandex.ru with scope `metrika:read`, token into `.env.marketing`; full flow in `tools/integrations/yandex-metrika.md`. Powers `/daytona-seo-notch-analytics` (incl. Yandex search phrases).
 
 ## 5. Test a small read and inspect the response
 
@@ -73,6 +75,7 @@ node --env-file=.env.marketing tools/clis/google-ads.js account info
 node --env-file=.env.marketing tools/clis/meta-ads.js accounts list
 node --env-file=.env.marketing tools/clis/ga4.js reports run --property 123456789 --metrics activeUsers --start-date yesterday --end-date yesterday
 node --env-file=.env.marketing tools/clis/google-search-console.js url inspect --url https://example.com/
+node --env-file=.env.marketing tools/clis/yandex-metrika.js counters list
 ```
 
 Run only the chosen line. Where supported, preview with `--dry-run` first (a preview proves request shape, not connectivity). Check both exit status **and** the provider response — some CLIs exit zero with an error payload. Record account/property, environment, operation, and outcome — without secrets or customer data. Empty results can be a valid connection.

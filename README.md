@@ -28,7 +28,7 @@ Two excellent open-source libraries already cover this space — but each is hal
 
 This repo merges the best implementation of every domain (decision matrix in the [PRD](\_bmad-output/initiative-antigravity-marketing-seo/prd-antigravity-marketing-seo/prd-antigravity-marketing-seo.md)), strips every Claude Code binding (`CLAUDE_PLUGIN_ROOT`, subagent idioms, hooks, `~/.claude` paths), and rewires orchestration for Antigravity's task planning. Both upstreams are MIT; full attribution in [`sources/PROVENANCE.md`](sources/PROVENANCE.md).
 
-## What's inside — 32 skills
+## What's inside — 33 skills
 
 ### 🔎 SEO line (`daytona-seo-notch*`, from claude-seo)
 
@@ -43,6 +43,7 @@ This repo merges the best implementation of every domain (decision matrix in the
 | [`/daytona-seo-notch-sitemap`](.agents/skills/daytona-seo-notch-sitemap/SKILL.md) | XML sitemap analysis & generation: 50k/50MB limits, lastmod accuracy, quality gates |
 | [`/daytona-seo-notch-ai`](.agents/skills/daytona-seo-notch-ai/SKILL.md) | **AI search visibility, strategy + executable**: AI Overviews / ChatGPT / Perplexity citations, prompt portfolio, llms.txt evidence, WebMCP, Lighthouse Agentic Browsing X/N, P0–P3 readiness priorities |
 | [`/daytona-seo-notch-drift`](.agents/skills/daytona-seo-notch-drift/SKILL.md) | **SEO drift monitoring**: baseline → compare → history, 17 comparison rules, SQLite |
+| [`/daytona-seo-notch-analytics`](.agents/skills/daytona-seo-notch-analytics/SKILL.md) | **Traffic intelligence**: GA4 + Yandex Metrika + GSC cross-engine reads — organic engine split, Yandex search phrases, landing pages, honest reconciliation |
 
 ### 📈 Marketing suite (from marketingskills, with per-skill evals)
 
@@ -53,7 +54,7 @@ This repo merges the best implementation of every domain (decision matrix in the
 | Piece | What it is |
 |---|---|
 | `tools/seo-runtime/` | 60 Python scripts under **uv** (isolated `.venv`): page render (Chromium), crawl, HTML parsing, PageSpeed/CrUX, sitemap discovery, schema generation, drift engine, agentic checks. Optional groups: `google` (GSC/GA4 APIs), `reports` (PDF/Excel) |
-| `tools/clis/` | 66 **zero-dependency Node CLIs**: GA4, Search Console, Google/Meta/LinkedIn/TikTok Ads, Ahrefs, Semrush, DataForSEO, Similarweb, Klaviyo, Stripe… |
+| `tools/clis/` | 67 **zero-dependency Node CLIs** (incl. `yandex-metrika.js`): GA4, Search Console, Google/Meta/LinkedIn/TikTok Ads, Ahrefs, Semrush, DataForSEO, Similarweb, Klaviyo, Stripe… |
 | [`/marketing-tools-setup`](.agents/skills/marketing-tools-setup/SKILL.md) | Guided, secret-safe account connections: credentials only in `.env.marketing` (0600, gitignored), read-only tests, Antigravity MCP wiring |
 | `.agents/mcp_config.example.json` | MCP template for data planes (DataForSEO, Firecrawl, Bing Webmaster, AIsa) — Antigravity schema, one transport per server |
 | BMAD method | Planning stack installed (`/bmad`, `/bmad-prd`, `/bmad-build`, `/bmad-toolsmith`) — PRD, brief and initiative live in `_bmad-output/` |

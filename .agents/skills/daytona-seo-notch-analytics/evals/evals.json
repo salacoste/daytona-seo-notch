@@ -1,0 +1,40 @@
+{
+  "skill_name": "daytona-seo-notch-analytics",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "how much traffic did we get last month and where from? we have ga4 and yandex metrika",
+      "expected_output": "Detects credential paths (GA4 runtime/CLI + Metrika env), reports which are live, pulls period totals from both engines plus GSC if configured, presents one comparison table with the GA4-vs-Metrika caveat (session definition, attribution, bot filtering) instead of silently blending numbers.",
+      "assertions": [
+        "Detects available sources first",
+        "Queries both engines for the period",
+        "Shows the reconciliation caveats",
+        "Read-only path only"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "покажи поисковые фразы из яндекса за октябрь",
+      "expected_output": "Runs yandex-metrika.js stats phrases with the period, reports top phrases, checks sample_share and caveats proportions when sampling is on, clusters phrases into topics and maps them to landing pages.",
+      "assertions": [
+        "Uses stats phrases preset",
+        "Handles sampling caveat",
+        "Clusters phrases into topics"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "our visits dropped, is it google or yandex?",
+      "expected_output": "Runs organic breakdown: Metrika stats sources (organic.yandex vs organic.google split) plus GSC clicks/impressions for the Google side; correlates an engine-specific drop with technical findings rather than a tracking bug; correlates with the Google updates ledger before attributing cause.",
+      "assertions": [
+        "Engine-split from Metrika sources",
+        "Cross-checks GSC",
+        "Separates engine issue from tracking issue",
+        "Checks update ledger before attributing"
+      ],
+      "files": []
+    }
+  ]
+}

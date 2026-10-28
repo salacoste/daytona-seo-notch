@@ -32,6 +32,7 @@ Available now (each is its own skill and slash command):
 | `/daytona-seo-notch-page <url>` | Deep single-page analysis |
 | `/daytona-seo-notch-technical <url>` | Technical SEO audit (9 categories incl. AI crawler management) |
 | `/daytona-seo-notch-ai <url>` | AI visibility: strategy (citations, prompts, presence) + executable agent-readiness audit (llms.txt, WebMCP, Lighthouse Agentic) |
+| `/daytona-seo-notch-analytics` | Traffic intelligence: GA4 + Yandex Metrika + GSC cross-engine reads (organic sources, Yandex search phrases, landing pages) |
 | `/daytona-seo-notch-content <url>` | E-E-A-T and content quality analysis |
 | `/daytona-seo-notch-schema <url>` | Detect, validate, and generate Schema.org markup |
 | `/daytona-seo-notch-sitemap <url or generate>` | Analyze or generate XML sitemaps |
