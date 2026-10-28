@@ -69,4 +69,6 @@ jobs:
       - name: Node CLIs execute (zero-dependency)
         run: |
           node --version
-          node tools/clis/ga4.js 2>&1 | grep -q "GA4_ACCESS_TOKEN" && echo "ga4 cli ok"
+          node tools/clis/ga4.js reports run --property 1 --metrics sessions --start-date 2026-10-01 --end-date 2026-10-01 2>&1 | grep -q "GA4_ACCESS_TOKEN" && echo "ga4 cli ok"
+          node tools/clis/yandex-metrika.js counters list 2>&1 | grep -q "YANDEX_METRIKA_TOKEN" && echo "yandex-metrika cli ok"
+          YANDEX_METRIKA_TOKEN=dummy YANDEX_METRIKA_COUNTER_ID=1 node tools/clis/yandex-metrika.js stats summary --start 2026-10-01 --end 2026-10-28 --dry-run 2>&1 | grep -q '"_dry_run": true' && echo "dry-run ok"
