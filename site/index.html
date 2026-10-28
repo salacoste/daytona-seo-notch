@@ -121,11 +121,36 @@
       </div>
     </section>
 
+    <!-- BY THE NUMBERS -->
+    <section class="section" style="padding-block:calc(var(--space-section)*0.55)" aria-label="Library by the numbers">
+      <div class="container">
+        <div class="grid grid-4" style="gap:var(--space-4)">
+          <div class="card" style="align-items:center;text-align:center">
+            <h3 style="font-size:2.5rem;color:var(--color-brand)">33</h3>
+            <p style="font-family:var(--font-label);font-size:0.875rem">agent skills, lint-clean</p>
+          </div>
+          <div class="card" style="align-items:center;text-align:center">
+            <h3 style="font-size:2.5rem;color:var(--color-brand)">60</h3>
+            <p style="font-family:var(--font-label);font-size:0.875rem">Python audit scripts</p>
+          </div>
+          <div class="card" style="align-items:center;text-align:center">
+            <h3 style="font-size:2.5rem;color:var(--color-brand)">67</h3>
+            <p style="font-family:var(--font-label);font-size:0.875rem">zero-dependency data CLIs</p>
+          </div>
+          <div class="card" style="align-items:center;text-align:center">
+            <h3 style="font-size:2.5rem;color:var(--color-brand)">143</h3>
+            <p style="font-family:var(--font-label);font-size:0.875rem">expert reference docs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- WHAT IT MEASURES -->
     <section class="section" aria-labelledby="measure-title">
       <div class="container">
         <p class="eyebrow">What the audit measures</p>
         <h2 id="measure-title">Everything a consultant would check</h2>
+        <p class="lead" style="margin-top:var(--space-4)">One library covers the whole professional SEO workflow — from crawl to citations, from Google to Yandex, from audit to weekly monitoring.</p>
         <div class="grid grid-3" style="margin-top:var(--space-8)">
           <article class="card">
             <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h7"/></svg></span>
@@ -157,6 +182,16 @@
             <h3>Drift monitoring</h3>
             <p>SQLite baselines and 17 comparison rules: run <code class="inline">drift compare</code> after every deploy and catch regressions before Google does.</p>
           </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
+            <h3>Traffic analytics: GA4 + Yandex Metrika</h3>
+            <p>Cross-engine reads: sessions, organic engine split, landing pages — and the <strong>Yandex search phrases</strong> GA4 cannot show. GSC joins automatically. <a href="/daytona-seo-notch/guides/analytics/">Setup guide →</a></p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5L19 19M19 5l-2.5 2.5M7.5 16.5L5 19"/></svg></span>
+            <h3>Data on demand</h3>
+            <p>67 read-only CLIs (Google/Meta/LinkedIn Ads, Ahrefs, Semrush, DataForSEO, Similarweb…) plus an MCP template — free sources by default, paid ones strictly opt-in.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -185,6 +220,40 @@
           </article>
         </div>
         <p style="margin-top:var(--space-8)"><a class="btn btn-primary" href="/daytona-seo-notch/skills/">Browse all 32 skills →</a></p>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL INFRASTRUCTURE -->
+    <section class="section" aria-labelledby="infra-title">
+      <div class="container">
+        <p class="eyebrow">Built like professional infrastructure</p>
+        <h2 id="infra-title">Flexible where it matters, disciplined where it counts</h2>
+        <div class="grid grid-3" style="margin-top:var(--space-8)">
+          <article class="card">
+            <h3>Free-first, paid-optional</h3>
+            <p>Every audit path works on free sources (rendering, robots/sitemap, Common Crawl, keyless PSI/CrUX). Paid providers unlock per-connection through MCP or CLIs — your budget, your choice.</p>
+          </article>
+          <article class="card">
+            <h3>Portable by standard</h3>
+            <p>Plain Agent Skills (<code class="inline">SKILL.md</code>) in <code class="inline">.agents/skills/</code>: tuned for Antigravity, readable by any compatible agent. No vendor lock-in, no proprietary formats.</p>
+          </article>
+          <article class="card">
+            <h3>Safety you can run on clients</h3>
+            <p>Read-only data paths, robots.txt respected, WAF probes authorization-gated. Secrets live in a 0600 gitignored file; CI scans every commit for leaks. 32 eval suites keep skills honest.</p>
+          </article>
+          <article class="card">
+            <h3>Honest provenance</h3>
+            <p>Merges two battle-tested MIT upstreams with a public decision matrix; every adapted file keeps its attribution and pinned commit. You always know where the knowledge came from.</p>
+          </article>
+          <article class="card">
+            <h3>BMAD planning inside</h3>
+            <p>Ships with the BMAD method stack: PRD, architecture and build workflows that planned this very library — use them to plan your own SEO operations.</p>
+          </article>
+          <article class="card">
+            <h3>One runtime, zero mess</h3>
+            <p>A uv-managed Python environment and zero-dependency Node CLIs live inside the repo. Nothing touches your system; <code class="inline">setup</code> is one command.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -265,6 +334,10 @@
             <div>Yes. The default audit path runs on free sources: headless rendering, robots.txt and sitemap analysis, Common Crawl domain metrics, and PageSpeed/CrUX where keyless access allows. A free <code class="inline">GOOGLE_API_KEY</code> unlocks field Core Web Vitals; paid providers like DataForSEO or Ahrefs are strictly opt-in via MCP or CLIs.</div>
           </details>
           <details>
+            <summary>Can it use our Google Analytics and Yandex Metrika data?</summary>
+            <div>Yes — <code class="inline">/daytona-seo-notch-analytics</code> reads GA4, Yandex Metrika and Search Console together: sessions, organic engine split, landing pages and Yandex search phrases. Connections are read-only, tokens stay in a local 0600 file. Follow the <a href="/daytona-seo-notch/guides/analytics/">step-by-step guide</a>.</div>
+          </details>
+          <details>
             <summary>Is it safe to run against client sites?</summary>
             <div>The audit is read-only and respects robots.txt. The only active probe (a WAF user-agent matrix) is explicitly gated behind owner authorization. API keys stay in a local 0600 <code class="inline">.env.marketing</code> file that CI verifies is never committed.</div>
           </details>
@@ -286,6 +359,7 @@
         <h4>Site</h4>
         <ul>
           <li><a href="/daytona-seo-notch/skills/">All skills</a></li>
+          <li><a href="/daytona-seo-notch/guides/analytics/">Analytics guide</a></li>
           <li><a href="#how">How it works</a></li>
           <li><a href="#quickstart">Quickstart</a></li>
           <li><a href="#faq">FAQ</a></li>
