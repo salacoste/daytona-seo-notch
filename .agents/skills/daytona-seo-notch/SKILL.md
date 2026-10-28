@@ -1,6 +1,6 @@
 ---
 name: daytona-seo-notch
-description: "Professional SEO analysis hub for any website or business type: full-site audits, single-page analysis, technical SEO (crawlability, indexability, Core Web Vitals with INP, AI crawler management), Schema.org markup, content quality (E-E-A-T), sitemap analysis. Industry detection for SaaS, e-commerce, local, publishers, agencies. Triggers on: SEO, audit, schema, Core Web Vitals, sitemap, E-E-A-T, technical SEO, content quality, page speed, robots.txt, indexing. Use this hub only when the SEO domain is clear and the requested workflow is not; otherwise use the specific daytona-seo-notch-* skill."
+description: "Professional SEO analysis hub for any website or business type: full-site audits, single-page analysis, technical SEO (crawlability, indexability, Core Web Vitals with INP, AI crawler management), Schema.org markup, content quality (E-E-A-T), sitemap analysis. Industry detection for SaaS, e-commerce, local, publishers, agencies. Triggers on: SEO, audit, schema, Core Web Vitals, sitemap, E-E-A-T, technical SEO, content quality, page speed, robots.txt, indexing, Google update questions (core/spam rollouts), traffic dropped or rankings lost, runtime setup and doctor checks. Use this hub only when the SEO domain is clear and the requested workflow is not; otherwise use the specific daytona-seo-notch-* skill."
 user-invocable: true
 argument-hint: "[command] [url]"
 license: MIT

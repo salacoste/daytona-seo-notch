@@ -1,0 +1,70 @@
+name: drift
+
+# Weekly SEO drift report on our own site (goal criterion 4).
+# First run captures the baseline if none exists for the URL; every next
+# run compares against the stored baseline and commits a dated report.
+
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  POLYGON: https://salacoste.github.io/daytona-seo-notch/
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ensure baseline exists
+        run: |
+          tools/seo-runtime/run fetch_page.py --help >/dev/null   # uv sync
+          if ! tools/seo-runtime/run drift_history.py "$POLYGON" --json 2>/dev/null | grep -q baseline; then
+            tools/seo-runtime/run drift_baseline.py "$POLYGON" --skip-cwv
+          fi
+
+      - name: Compare and render report
+        run: |
+          mkdir -p drift-reports
+          STAMP="$(date -u +%Y-%m-%d)"
+          tools/seo-runtime/run drift_compare.py "$POLYGON" --skip-cwv > "drift-reports/${STAMP}.json"
+          python3 - <<'EOF'
+          import json, datetime, pathlib
+          stamp = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+          data = json.load(open(f"drift-reports/{stamp}.json"))
+          s = data.get("summary", {})
+          findings = data.get("triggered_findings", [])
+          lines = [
+              f"# Drift report — {stamp}",
+              "",
+              f"Target: {data.get('url')}",
+              f"Baseline: {data.get('baseline_id')} (captured {data.get('baseline_timestamp','')})",
+              f"Rules triggered: **{s.get('triggered', '?')}** of {s.get('total_rules','?')} "
+              f"(critical {s.get('critical')}, warning {s.get('warning')}, info {s.get('info')})",
+              "",
+          ]
+          for f in findings:
+              lines.append(f"- **{f.get('severity')}/{f.get('rule')}**: {f.get('message')}")
+          if not findings:
+              lines.append("No drift detected. Page matches baseline.")
+          pathlib.Path(f"drift-reports/{stamp}.md").write_text("\n".join(lines) + "\n")
+          EOF
+
+      - name: Commit report
+        run: |
+          git config user.name "drift-bot"
+          git config user.email "actions@github.com"
+          git add drift-reports
+          git diff --cached --quiet && echo "no changes" || git commit -m "drift: weekly report $(date -u +%Y-%m-%d)"
+          git push

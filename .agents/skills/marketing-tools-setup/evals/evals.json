@@ -1,0 +1,39 @@
+{
+  "skill_name": "marketing-tools-setup",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "connect our ga4 and google ads so the agent can read our numbers",
+      "expected_output": "Guided flow: checks node + CLI presence, asks which account/property and environment, creates .env.marketing (0600, gitignored) with only the needed variables, walks the official OAuth flow, then runs one read-only test per tool and reports connected/waiting/failed. Never asks for tokens in chat.",
+      "assertions": [
+        "One tool at a time",
+        "Secrets only in .env.marketing",
+        "Read-only first test",
+        "No token in chat"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "давай подключим яндекс метрику и dataforseo через mcp",
+      "expected_output": "Routes to the MCP section: copies .agents/mcp_config.example.json to .agents/mcp_config.json, enables chosen entries (one transport each), points keys to local env by reference, reloads via /mcp, runs the cheapest/free read before declaring the connection, and confirms budget authorization for paid lookups.",
+      "assertions": [
+        "Uses mcp_config.json flow",
+        "Reload via /mcp",
+        "Budget check before paid lookups"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "where do i put the api keys so they don't leak?",
+      "expected_output": "Explains .env.marketing (0600, gitignored, verified with git check-ignore), never chat/logs/commits; CI scans for leaks; refresh tokens belong in a secret manager.",
+      "assertions": [
+        "Points to .env.marketing with permissions",
+        "Mentions CI secrets scan",
+        "No keys in chat policy"
+      ],
+      "files": []
+    }
+  ]
+}

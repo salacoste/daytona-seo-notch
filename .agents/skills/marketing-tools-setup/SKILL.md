@@ -1,6 +1,6 @@
 ---
 name: marketing-tools-setup
-description: "Guided workflow for connecting marketing data accounts (Google Ads, Meta, LinkedIn, GA4, GSC, Stripe, Ahrefs, Semrush, DataForSEO, keyword tools) to this workspace safely: local CLIs in tools/clis/, MCP servers in .agents/mcp_config.json, credentials only in .env.marketing. Use when the user says 'connect', 'add API key', 'set up token', 'integrate', 'MCP setup', or wants an agent to read a marketing account. One tool at a time, read-only first, secrets never in chat."
+description: "Guided workflow for connecting marketing data accounts (Google Ads, Meta, LinkedIn, GA4, GSC, Stripe, Ahrefs, Semrush, DataForSEO, keyword tools) to this workspace safely: local CLIs in tools/clis/, MCP servers in .agents/mcp_config.json, credentials only in .env.marketing. Use when the user says 'connect', 'add API key', 'set up token', 'integrate', 'MCP setup', asks where to store API keys safely, or wants an agent to read a marketing account. One tool at a time, read-only first, secrets never in chat."
 user-invocable: true
 argument-hint: "[tool]"
 license: MIT

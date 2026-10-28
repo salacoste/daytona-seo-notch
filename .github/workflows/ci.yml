@@ -38,6 +38,9 @@ jobs:
           print(f"evals: {len(files)} files checked")
           sys.exit(1 if bad else 0)
           EOF
+      - name: Eval harness (structural + trigger anchors)
+        run: python3 tools/run_evals.py
+
       - name: Secrets scan (tracked files)
         run: |
           ! git grep -InIE "(AIza[0-9A-Za-z_-]{30,}|sk-[A-Za-z0-9]{20,}|-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY-----)" -- . ':!sources/**' ':!*.lock'

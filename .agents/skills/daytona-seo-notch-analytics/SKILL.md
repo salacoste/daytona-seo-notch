@@ -1,6 +1,6 @@
 ---
 name: daytona-seo-notch-analytics
-description: "Traffic intelligence from web analytics for SEO: pulls Google Analytics 4, Yandex Metrika and Google Search Console data the user already has, cross-engine. Use when the user asks about traffic, visits, organic performance, Yandex Metrika, GA4, 'сколько посещений', 'откуда трафик', search phrases in Yandex, landing pages, traffic drop investigation, or wants analytics enrichment for an audit. Read-only; credentials detected, never requested in chat."
+description: "Traffic intelligence from web analytics for SEO: pulls Google Analytics 4, Yandex Metrika and Google Search Console data the user already has, cross-engine. Use when the user asks about traffic, visits, organic performance, Yandex Metrika, GA4, 'сколько посещений', 'откуда трафик', search phrases in Yandex, landing pages, traffic drop investigation, or wants analytics enrichment for an audit. Русские триггеры: поисковые фразы Яндекса, посещаемость, откуда трафик, упал трафик. Read-only; credentials detected, never requested in chat."
 user-invocable: true
 argument-hint: "overview|organic|phrases|landing|compare <url-or-counter>"
 license: MIT

@@ -2,9 +2,10 @@
 name: daytona-seo-notch-content
 description: >
   Evaluate page content for usefulness, E-E-A-T, readability, thinness, and AI
-  citation readiness, plus last-mile draft cleanup (AI-typical phrasing and
-  invisible Unicode watermark characters). Use for content-only analysis, not
-  full-page technical checks.
+  citation readiness, plus last-mile draft cleanup (rewrite AI-sounding drafts:
+  AI-typical phrasing and invisible Unicode watermark characters). Use for
+  content-only analysis ("is our blog good enough to rank?"), not full-page
+  technical checks.
 user-invocable: true
 argument-hint: "[url]"
 license: MIT
